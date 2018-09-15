@@ -25,4 +25,4 @@ after_success:
 - git commit -m "Travis CI Auto Builder"
 - git push --quiet --force https://$REPO_TOKEN@github.com/RMzcq/blog.git master
 - chmod 600 ~/.ssh/id_rsa  
-- ssh root@45.78.62.19 -p 26301 -o StrictHostKeyChecking=no 'cd /www/wwwroot/blog && git reset --hard origin/master && git pull'   #使用ssh连接服务器
+- ssh root@45.78.62.19 -o StrictHostKeyChecking=no 'cd /www/wwwroot/blog && git reset --hard origin/master && git pull'   #使用ssh连接服务器
