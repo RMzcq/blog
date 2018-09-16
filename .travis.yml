@@ -20,6 +20,9 @@ install:
 script:
 - hexo clean
 - hexo generate
+addons:
+  ssh_known_hosts:
+  - 45.78.62.19
 after_success:
 - cd ./public
 - git init
@@ -27,6 +30,5 @@ after_success:
 - git commit -m "Travis CI Auto Builder"
 - git push --quiet --force https://$REPO_TOKEN@github.com/RMzcq/blog.git master
 - chmod 600 ~/.ssh/id_rsa
-- restorecon -R ~/.ssh
 - ssh -p 26301 root@45.78.62.19 -v -o StrictHostKeyChecking=no 'cd /www/wwwroot/blog
   && git reset --hard origin/master && git pull'
