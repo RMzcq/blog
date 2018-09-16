@@ -4,11 +4,6 @@ branches:
   only:
   - source
 before_install:
-- openssl aes-256-cbc -K $encrypted_468d5cafde79_key -iv $encrypted_468d5cafde79_iv -in id_rsa.enc -out ~/.ssh/id_rsa -d
-- chmod 600 ~/.ssh/id_rsa
-- echo `cat ~/.ssh/id_rsa`
-- echo `cat /home/travis/.ssh/id_rsa` 
-- echo -e "Host 主机IP地址\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - git config --global user.name "zhaochangqing"
 - git config --global user.email "jingtingchangqing@gmail.com"
 - curl -o- -L https://yarnpkg.com/install.sh | bash
@@ -20,15 +15,9 @@ install:
 script:
 - hexo clean
 - hexo generate
-addons:
-  ssh_known_hosts:
-  - 45.78.62.19
 after_success:
 - cd ./public
 - git init
 - git add --all .
 - git commit -m "Travis CI Auto Builder"
 - git push --quiet --force https://$REPO_TOKEN@github.com/RMzcq/blog.git master
-- chmod 600 ~/.ssh/id_rsa
-- ssh -p 26301 root@45.78.62.19 -v -o StrictHostKeyChecking=no 'cd /www/wwwroot/blog
-  && git reset --hard origin/master && git pull'
