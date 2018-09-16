@@ -4,9 +4,9 @@ branches:
   only:
   - source
 before_install:
-- openssl aes-256-cbc -K $encrypted_468d5cafde79_key -iv $encrypted_468d5cafde79_iv
-  -in id_rsa.enc -out ~/.ssh/id_rsa -d
+- openssl aes-256-cbc -K $encrypted_468d5cafde79_key -iv $encrypted_468d5cafde79_iv -in id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
+- echo -e "Host 主机IP地址\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - git config --global user.name "zhaochangqing"
 - git config --global user.email "jingtingchangqing@gmail.com"
 - curl -o- -L https://yarnpkg.com/install.sh | bash
