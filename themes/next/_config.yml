@@ -559,7 +559,7 @@ needmoreshare2:
     enable: true
     options:
       iconStyle: default
-      boxForm: horizontal
+      boxForm: vertical
       position: middleRight
       networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
 
