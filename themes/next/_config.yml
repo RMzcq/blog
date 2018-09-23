@@ -629,7 +629,7 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: true
+  enable: false
   app_id: 1uL0Ak74SJ9pq1bktMQRJBr3-gzGzoHsz
   app_key: 1uL0Ak74SJ9pq1bktMQRJBr3-gzGzoHsz
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
@@ -651,7 +651,7 @@ firestore:
 # Show Views/Visitors of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: user
   total_views: true
