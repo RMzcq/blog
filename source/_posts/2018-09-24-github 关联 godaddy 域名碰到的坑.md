@@ -2,7 +2,7 @@
 title: github 关联 godaddy 域名碰到的坑
 top: 100
 date: 2018-09-24 22:43:35
-urlname: github and godaddy f**k
+urlname: github-and-godaddy-fk
 categories: 工具
 tags: [github,godaddy]
 ---
