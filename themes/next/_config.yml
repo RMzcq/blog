@@ -310,7 +310,7 @@ codeblock:
 
 # Reward
 reward_comment: 谢谢你请我吃糖
-#wechatpay: /images/wechatpay.jpg
+wechatpay: /images/wechatpay.png
 alipay: /images/alipay.png
 #bitcoin: /images/bitcoin.png
 
