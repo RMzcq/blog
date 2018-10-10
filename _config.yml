@@ -58,6 +58,7 @@ default_category: uncategorized
 category_map:
   前端 : front
   工具 : tool
+  骑行 : ride
 tag_map:
 
 # Date / Time format
