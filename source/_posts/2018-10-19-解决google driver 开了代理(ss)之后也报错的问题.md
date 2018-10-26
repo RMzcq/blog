@@ -6,8 +6,6 @@ urlname: googleDriver problem1
 categories: 工具
 tags: [google driver,ss]
 ---
-# 解决google driver 开了代理(ss)之后也报错的问题
-
 问题困扰了很久，但是也找不到解决版本，后来使用关键字搜索到了。使用命令行的方式不建议，一是维护麻烦，而是不太懂。。。
 <!--more-->
 ![](https://ws2.sinaimg.cn/large/006tNbRwly1fwkgv15s7aj30rs0i8gn8.jpg)

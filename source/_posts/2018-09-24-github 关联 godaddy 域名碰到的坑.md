@@ -6,7 +6,6 @@ urlname: github-and-godaddy-fk
 categories: 工具
 tags: [github,godaddy]
 ---
-# github 关联 godaddy 域名碰到的坑
 故事起因，自己有一台服务器，原来博客是部署在上面的，这次打算公开并且开始真正的写博客了，想不公开服务器的ip，因为上面部署了好多东西，你懂的。所以后来就想还是用github吧，然后域名解析给我坑死了，下面说一下步骤吧，有问题可以联系我。
 <!--more-->
 ## github 配置
