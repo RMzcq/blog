@@ -32,7 +32,9 @@
   {% if theme.sidebar.position %}
     {% set container_class = container_class + 'sidebar-position-' + theme.sidebar.position %}
   {% endif %}
-
+  <!-- Google AdSense start -->
+  {% include '_custom/google_adsense.ejs' %}
+  <!-- Google AdSense end -->
   <div class="{{ container_class }} {% block page_class %}{% endblock %}">
     <div class="headband"></div>
 
