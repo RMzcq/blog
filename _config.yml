@@ -62,6 +62,7 @@ category_map:
   concurrency : concurrency
   开源 : oss
   centos : centos
+  网络 : net
 tag_map:
 
 # Date / Time format
