@@ -61,6 +61,7 @@ category_map:
   骑行 : ride
   concurrency : concurrency
   开源 : oss
+  centos : centos
 tag_map:
 
 # Date / Time format
