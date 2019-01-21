@@ -63,6 +63,7 @@ category_map:
   开源 : oss
   centos : centos
   网络 : net
+  redis : redis
 tag_map:
 
 # Date / Time format
