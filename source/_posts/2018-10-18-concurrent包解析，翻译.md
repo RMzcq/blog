@@ -11,7 +11,7 @@ tags: [并发,concurrency]
 ### 第二版使用mark这个标记，为了更好的区分
 
 我本人比较笨，学并发也比较恼火，想了一下，还是翻译一下吧，欢迎大家指正，监督。
-邮箱：dddjavablog@gmail.com 
+邮箱：jingtingchangqing@163.com 
 jdk版本:1.8
 工具:idea
 <!--more-->
