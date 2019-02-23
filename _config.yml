@@ -64,6 +64,7 @@ category_map:
   centos : centos
   网络 : net
   redis : redis
+  生活 : life
 tag_map:
 
 # Date / Time format
