@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Qing Emperor</title>
+  
+  <subtitle>青</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.dddjava.com/"/>
+  <updated>2019-08-01T02:23:06.985Z</updated>
+  <id>http://www.dddjava.com/</id>
+  
+  <author>
+    <name>Qing</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>idea搭建zookeeper源码服务器</title>
+    <link href="http://www.dddjava.com/zookeeper%20opensource.html"/>
+    <id>http://www.dddjava.com/zookeeper opensource.html</id>
+    <published>2019-07-18T19:21:47.000Z</published>
+    <updated>2019-08-01T02:23:06.985Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>今年的一个小目标就是看一个java的开源软件，首先从zookeeper入手，毕竟比别的”简单“些<br><a id="more"></a></p><h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><ul><li>GitHub下载源码</li><li>不要使用master分支，自己使用的时候，有实现类冲突，不知道后续会解决没有，因此选择了稳定版本3.5.5</li><li>去掉 zookeeper-server项目中pom文件中的两个jetty的scope，因为咱们运行的时候，还是使用的jetty服务器，所以得引入进来，要不然会报错</li></ul><p><img src="https://i.loli.net/2019/07/18/5d3057eabaa9a31488.png" alt=""></p><ul><li>添加resources编译，因为要不然resources目录不会编辑进入class文件夹，日志就出不来，会有警告</li></ul><p><img src="https://i.loli.net/2019/07/18/5d30586e058da63807.png" alt=""></p><ul><li>copy 根目录下的conf下的log4j文件到zookeeper-server项目下的resources下</li><li><p>copy 根目录下的conf下的 zoo_sample.cfg到自己的文件目录下，修改端口最好，因为防止和brew搭建zookeeper冲突，可以更好的校验</p></li><li><p>配置 zoo_sample.cfg 修改名字为 zoo.cfg，修改日志路径和端口如下：</p></li></ul><p><img src="https://i.loli.net/2019/07/18/5d3059730262189597.png" alt=""></p><ul><li>配置idea启动，就ok了，有日志显示</li></ul><p><img src="https://i.loli.net/2019/07/18/5d3059bbf09f994251.png" alt=""></p><ul><li>测试</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zkCli -server localhost:2189</span><br></pre></td></tr></table></figure><p>自己添加个对象，然后获取下，说明成功了，停用服务器，客户端再获取，会抛出异常，说明成功啦！</p><h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>网上的18年3月份的教程都是ant编译的，但是现在maven已经支持了，所以省事了不少，有问题可以及时反馈我的邮箱和评论。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;今年的一个小目标就是看一个java的开源软件，首先从zookeeper入手，毕竟比别的”简单“些&lt;br&gt;
+    
+    </summary>
+    
+      <category term="oss" scheme="http://www.dddjava.com/categories/oss/"/>
+    
+    
+      <category term="开源" scheme="http://www.dddjava.com/tags/%E5%BC%80%E6%BA%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>程序员如何买降噪耳机，如何煲耳机</title>
+    <link href="http://www.dddjava.com/earphone.html"/>
+    <id>http://www.dddjava.com/earphone.html</id>
+    <published>2019-02-23T23:11:40.000Z</published>
+    <updated>2019-08-01T02:23:06.985Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h3><p>由于不想听到一些声音，所以买了个降噪耳机</p><h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><p>在群里问了不少程序员，主要有4款，bose qc2，索尼mx2，索尼入耳的，bose入耳的。网上也看了不少评价，了解了之后，就去店里<a id="more"></a>看看（就好比网上看自行车，一定要去店里试试）</p><h3 id="北京店里看耳机"><a href="#北京店里看耳机" class="headerlink" title="北京店里看耳机"></a>北京店里看耳机</h3><p>在新天地，bose和索尼一个在五区，一个在一区，当时迷糊了，找bose 的时候去的苹果店，还好不远。后来才恍然意识到，苹果是beats啊！我了个大擦</p><h3 id="实体店结论"><a href="#实体店结论" class="headerlink" title="实体店结论"></a>实体店结论</h3><p>bose：qc带起来真舒服，效果也不错，降噪有环境音，当时不会用，没看开启的等级，后来验证，完全足够用了<br>索尼：索尼体验店有一个重大的失误，他们的耳机上面都是挂着防盗的，有点重量。带起来一般，降噪很nb，实际上没有qc舒服，索尼音质不错（自己的入耳的都是索尼的）<br>入耳的：都不咋地，耳朵不习惯</p><h3 id="tb购买"><a href="#tb购买" class="headerlink" title="tb购买"></a>tb购买</h3><p>看完了，就去tb买呗（不差钱，就官方吧）<br>按照销量一排序，我擦lei，怎么才1700，后来一问说是没发票，说是可以保修，我信不过，找了个2000的，带发票的。</p><h3 id="验货"><a href="#验货" class="headerlink" title="验货"></a>验货</h3><ul><li>注册官方通过</li><li>连接官方app通过</li><li>通过app查看生产时间，18年8月份，很新</li><li>看了外观，塑封，序列好啥的，没看出是毛病，抠鼻表情</li></ul><p>没翻车，还行。<br>下一步就是如何煲耳机了</p><h3 id="煲耳机"><a href="#煲耳机" class="headerlink" title="煲耳机"></a>煲耳机</h3><p>tb客服提供了因为文件。我问他要教程，他说去他们tb首页就有，我看了不详细。后来看了给的文件，里面有教程！！！<br>我又查了一些资料，归纳一下，首先，有说煲耳机有用的，有说没有用的，使用大G搜索耳机，论坛不错，里面很多教程也可以参考。</p><p>煲耳机分为自然煲和刻意煲<br>自然煲就是让他加速成熟，聆听声音，聆听了一共63个小时<br>刻意煲，我没记录，应该是通过软件</p><p>我工作中用mac，家里面还有一台公司的闲置ThinkPad，远程用他煲耳机！（有线连接耳机，不要用蓝牙，耳机没电了就不能用了，如果用有线，没电了可以继续听）<br>下载teamviewr，远程控制时间，下载网易云音乐（试了一下支持原生音乐文件）</p><p>煲耳机分为3个阶段（具体可以看我分享的网盘文件，这里只说步骤！）</p><ul><li>适应期，用渡口 11 个小时，正常音量30%，然后休息4个小时（本来想用 Treasure.Island.Sound.UNPLUG.Unplug1诞生 ，但是听着不得劲）</li><li>关键煲期，梁祝、渡口、闲云孤鹤 48小时 60%至70%正常音量，3首歌，不停循环，然后休息4个小时</li><li>收尾，加州旅馆、The mass（Era）、Fairytale（神秘花园） 50% 14个小时</li><li>最后2个星期，就按照自己的听歌习惯，不停去适应，慢慢就好了。</li></ul><p>音量的说明：<br>一直没明白他说的正常音量是耳朵听到的啊，还是最大的，可是最大音量吧，这个不同的电脑，软件是不同的，所以我都是以正常音量为标准！</p><p>煲完之后，我对比了一下，确实柔和圆润了许多。</p><h3 id="共享文件如下"><a href="#共享文件如下" class="headerlink" title="共享文件如下"></a>共享文件如下</h3><p>链接:<a href="https://pan.baidu.com/s/1DPwuS87H05sE2XazjAilWg" target="_blank" rel="noopener">https://pan.baidu.com/s/1DPwuS87H05sE2XazjAilWg</a>  密码:326s</p><p>我放了好多资源，文件名直接搜索就行了。对了，耳机刚到的时候，用试听的文件去试！！！</p><h3 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h3><ul><li>音量控制自己做好笔记，下一次有对比</li><li>teamviewer会说你是商用，然后你自己电脑也有声音的同时，远程电脑的声音不会断掉，时间到了，暂停就行了，记得清空播放列表哈</li><li>最后煲完了，直接远程电脑关机是最好的</li></ul><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>以上只代表了我的煲耳机步骤，并分享出来，煲坏了不怪我哦，音量控制是关键。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;初衷&quot;&gt;&lt;a href=&quot;#初衷&quot; class=&quot;headerlink&quot; title=&quot;初衷&quot;&gt;&lt;/a&gt;初衷&lt;/h3&gt;&lt;p&gt;由于不想听到一些声音，所以买了个降噪耳机&lt;/p&gt;
+&lt;h3 id=&quot;过程&quot;&gt;&lt;a href=&quot;#过程&quot; class=&quot;headerlink&quot; title=&quot;过程&quot;&gt;&lt;/a&gt;过程&lt;/h3&gt;&lt;p&gt;在群里问了不少程序员，主要有4款，bose qc2，索尼mx2，索尼入耳的，bose入耳的。网上也看了不少评价，了解了之后，就去店里
+    
+    </summary>
+    
+      <category term="生活" scheme="http://www.dddjava.com/categories/life/"/>
+    
+    
+      <category term="【煲耳机】" scheme="http://www.dddjava.com/tags/%E3%80%90%E7%85%B2%E8%80%B3%E6%9C%BA%E3%80%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>redis在springboot 2版本下的使用的问题</title>
+    <link href="http://www.dddjava.com/redisProblem.html"/>
+    <id>http://www.dddjava.com/redisProblem.html</id>
+    <published>2019-01-21T20:14:05.000Z</published>
+    <updated>2019-08-01T02:23:06.985Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天起的新项目使用spring session redis。<br>抛出了几个问题，问题异常不贴了<br><a id="more"></a></p><h1 id="初始化redis-工厂实例失败"><a href="#初始化redis-工厂实例失败" class="headerlink" title="初始化redis 工厂实例失败"></a>初始化redis 工厂实例失败</h1><p>异常如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Consider revisiting the conditions above or defining a bean of type &apos;org.springframework.data.redis.connection.jedis.JedisConnectionFactory&apos; in your configuration.</span><br></pre></td></tr></table></figure><p>自己使用了 </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;org.springframework.session&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;spring-session-data-redis&lt;/artifactId&gt;</span><br><span class="line">           &lt;version&gt;2.1.2.RELEASE&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure><p>只添加这一个是不行的，因为我们如果打开pom文件会发现，虽然引用了 spring-data-redis ，但是其中的两个driver </p><p><img src="https://i.loli.net/2019/06/10/5cfe14be5538468970.jpg" alt="500f7dd1d623e0017c4044689ebe9925"></p><p>都是option的，可选择的，所以在主要的项目中得指定一个redis客户端。<br>从2.0开始，spring 默认使用的 lettuce 客户端，我们可以添加上他就ok了。</p><p><img src="https://i.loli.net/2019/06/10/5cfe14bea8d8e41984.jpg" alt="0ab3127c8689cbf40542219fd12643a8"></p><p>如图所示，commons包也是option的，所以也得添加。<br>如果想使用jedis客户端，那么就直接引用jedis客户端就行了，去掉截图中的两个引用。</p><p>ps：<br>顺便再提及一点，如果同时引用了lettuce，jedis两个jar包的话，那么就会产生jedis初始化失败的问题，这是因为，源码中 LettuceConnectionConfiguration 初始化比redis的工厂类早。</p><h1 id="如果使用lettuce碰到连接超时的问题，RedisCommandTimeoutException"><a href="#如果使用lettuce碰到连接超时的问题，RedisCommandTimeoutException" class="headerlink" title="如果使用lettuce碰到连接超时的问题，RedisCommandTimeoutException"></a>如果使用lettuce碰到连接超时的问题，RedisCommandTimeoutException</h1><p>那么将截图中的timeout配置项去掉就可以了。</p><p><img src="https://i.loli.net/2019/06/10/5cfe14bf3084a95083.jpg" alt="28145be2d53fc6d26afe3d705e163369"></p><h1 id="说明一下"><a href="#说明一下" class="headerlink" title="说明一下"></a>说明一下</h1><p>最近比较忙，写了不少笔记，总结了很多东西，不少干活。近一年会主键开发。<br>起了个新项目，今年开源，用到了不少东西，对新手比较友好。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天起的新项目使用spring session redis。&lt;br&gt;抛出了几个问题，问题异常不贴了&lt;br&gt;
+    
+    </summary>
+    
+      <category term="redis" scheme="http://www.dddjava.com/categories/redis/"/>
+    
+    
+      <category term="redis" scheme="http://www.dddjava.com/tags/redis/"/>
+    
+      <category term="spring boot" scheme="http://www.dddjava.com/tags/spring-boot/"/>
+    
+      <category term="spring session" scheme="http://www.dddjava.com/tags/spring-session/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何内网穿透+闲置的电脑能干啥？做服务器啊</title>
+    <link href="http://www.dddjava.com/nat-ddns.html"/>
+    <id>http://www.dddjava.com/nat-ddns.html</id>
+    <published>2018-11-17T18:54:06.000Z</published>
+    <updated>2019-08-01T02:23:06.985Z</updated>
+    
+    <content type="html"><![CDATA[<p>内网穿透，举个例子，我有个笔记本，然后闲置了，连上网了，可是远程怎么用，虽然可以使用teamviewer这种，可以作为一种工具。不过对于我来说不合适。<a id="more"></a><br>需求：<br>Linux服务器：最后自己做个映射。<br>Windows这种：用teamviewer足够了，也可以做映射，比如做为自己的网站，内容都保存在自己的电脑上，也ok，好多都用树莓派啥的做服务器，也都行。<br>网盘：用群辉，google或者百度一搜一堆教程。<br>电脑重装成centos，需要远程访问，需要暴漏ip地址，但是外网的ip是活动的，因此需要使用第三方服务器，最快捷的就是使用花生壳，6块钱买个服务。<br>简单说一下步骤：</p><h2 id="按照网址http-service-oray-com-question-4287-html-注册，然后购买内网穿透，有一点就是映射列表添加的时候内网主机写127-0-0-1"><a href="#按照网址http-service-oray-com-question-4287-html-注册，然后购买内网穿透，有一点就是映射列表添加的时候内网主机写127-0-0-1" class="headerlink" title="按照网址http://service.oray.com/question/4287.html 注册，然后购买内网穿透，有一点就是映射列表添加的时候内网主机写127.0.0.1"></a>按照网址<a href="http://service.oray.com/question/4287.html" target="_blank" rel="noopener">http://service.oray.com/question/4287.html</a> 注册，然后购买内网穿透，有一点就是映射列表添加的时候内网主机写127.0.0.1</h2><p><img src="https://i.loli.net/2019/06/10/5cfe14bda5eb392865.jpg" alt=""></p><h2 id="自己远程ssh的时候，用户名密码记得写自己服务器的用户名，密码。"><a href="#自己远程ssh的时候，用户名密码记得写自己服务器的用户名，密码。" class="headerlink" title="自己远程ssh的时候，用户名密码记得写自己服务器的用户名，密码。"></a>自己远程ssh的时候，用户名密码记得写自己服务器的用户名，密码。</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;内网穿透，举个例子，我有个笔记本，然后闲置了，连上网了，可是远程怎么用，虽然可以使用teamviewer这种，可以作为一种工具。不过对于我来说不合适。
+    
+    </summary>
+    
+      <category term="网络" scheme="http://www.dddjava.com/categories/net/"/>
+    
+    
+      <category term="内网穿透" scheme="http://www.dddjava.com/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何使用U盘安装centos</title>
+    <link href="http://www.dddjava.com/centos.html"/>
+    <id>http://www.dddjava.com/centos.html</id>
+    <published>2018-11-17T16:29:17.000Z</published>
+    <updated>2019-08-01T02:23:06.985Z</updated>
+    
+    <content type="html"><![CDATA[<p>如何使用U盘安装centos<br>自从换了mac本之后，Windows本就很少用了，本来便宜卖给兄弟的，但是嫂子嫌弃太沉了。就一直搁置着，现在因为需要学习些东西，需要将他搞成Linux，因为自己的服务器也是centos的，所以就装的centos，然后再搞一个内网穿透外网就ok了。踩了不少坑，下面把步骤列出来<br><a id="more"></a></p><h2 id="下载centos，去官网下载就ok了，用的dvd版本。那个版本都行，最好不要用迅雷啥的下载，那样子还得校验md5，网速快的的话使用浏览器默认的下载工具几分钟的事情"><a href="#下载centos，去官网下载就ok了，用的dvd版本。那个版本都行，最好不要用迅雷啥的下载，那样子还得校验md5，网速快的的话使用浏览器默认的下载工具几分钟的事情" class="headerlink" title="下载centos，去官网下载就ok了，用的dvd版本。那个版本都行，最好不要用迅雷啥的下载，那样子还得校验md5，网速快的的话使用浏览器默认的下载工具几分钟的事情"></a>下载centos，去官网下载就ok了，用的dvd版本。那个版本都行，最好不要用迅雷啥的下载，那样子还得校验md5，网速快的的话使用浏览器默认的下载工具几分钟的事情</h2><h2 id="使用u深度，老毛桃都行，直接制作iso模式，不要使用智能模式！！！"><a href="#使用u深度，老毛桃都行，直接制作iso模式，不要使用智能模式！！！" class="headerlink" title="使用u深度，老毛桃都行，直接制作iso模式，不要使用智能模式！！！"></a>使用u深度，老毛桃都行，直接制作iso模式，不要使用智能模式！！！</h2><p>这一步有坑，使用ios刻录到U盘中，相当于u盘就是iso了，如果使用的智能模式，那么还得拷贝，主要是有一步识别的问题！</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>插入u盘<br>华硕电脑选择F2<br>然后调整boot顺序<br>然后到如下页面后<br><img src="https://i.loli.net/2019/06/10/5cfe14c02c42276143.jpg" alt=""></p><p>这一步的时候，网上教程说是按着e编辑，我这按了好久不行，结果发现是table键，有英文提示，然后将<br>vmlinuz initrd=initrd.img inst.stage2=hd:LABEL=CentOS\x207\x20x86_64 quiet<br>改成<br>vmlinuz initrd=initrd.img linux dd quiet</p><p>然后按回车就行<br>这里显示的硬盘的信息<br><img src="https://i.loli.net/2019/06/10/5cfe14c5d361425462.jpg" alt=""></p><p>网上的图，我的是sdb4<br>使用ctrl alt del重启不行，然后我就关了电源，继续进入，然后按住table，编辑如下<br>将<br>vmlinuz initrd=initrd.img inst.stage2=hd:LABEL=CentOS\x207\x20x86_64 quiet<br>改成<br>vmlinuz initrd=initrd.img inst.stage2=hd:/dev/sda4（上一步查看的你自己的U盘盘符） quiet<br>然后按回车就ok了。<br><img src="https://i.loli.net/2019/06/10/5cfe14c63440086816.jpg" alt=""></p><p>1，2，3都默认好了，中文的，<br>4的话，我选择了gnome桌面，毕竟方便看一些<br><img src="https://i.loli.net/2019/06/10/5cfe14c6ab20498329.jpg" alt=""></p><p><img src="https://i.loli.net/2019/06/10/5cfe14c70846f87546.jpg" alt=""></p><p>5的话，我选择的自动分区，比较懒。。。<br><img src="https://i.loli.net/2019/06/10/5cfe14c756cc729101.jpg" alt=""></p><p>6这里的话，选择一下wifi或者有线<br><img src="https://i.loli.net/2019/06/10/5cfe14cd5dad627105.jpg" alt=""></p><p>开始安装吧<br>然后下一步设置一下密码就ok了。最好别用大写，有时间会坑，因为这个切换大小写忘了之后就完了。我就是找了好久发现一个本来应该小写的结果大写了，密码都搞错了，后来修改了。<br><img src="https://i.loli.net/2019/06/10/5cfe14cda21f164895.jpg" alt=""></p><p>记得！！！拔掉u盘，然后就ok了。</p><h2 id="开始ssh远程连接"><a href="#开始ssh远程连接" class="headerlink" title="开始ssh远程连接"></a>开始ssh远程连接</h2><p>默认已经安装了ssh，如果是dvd版本的话<br>步骤如下：<br>第一步</p><h6 id="查看本机是否安装SSH软件包"><a href="#查看本机是否安装SSH软件包" class="headerlink" title="查看本机是否安装SSH软件包"></a>查看本机是否安装SSH软件包</h6><p>[root@localhost ~]# rpm -qa | grep ssh<br>openssh-server-6.6.1p1-12.el7_1.x86_64<br>openssh-clients-6.6.1p1-12.el7_1.x86_64<br>libssh2-1.4.3-8.el7.x86_64<br>openssh-6.6.1p1-12.el7_1.x86_64</p><p>#####如果没有，则需要安装<br>[root@localhost /]# yum install openssh-server<br>第二步</p><p>#####开启 SSH 服务<br>[root@localhost ~]# service sshd start<br>Redirecting to /bin/systemctl start  sshd.service</p><p>#####查看TCP 22端口是否打开<br>[root@localhost ~]# netstat -ntpl | grep 22<br>tcp        0      0 0.0.0.0:22              0.0.0.0:<em>               LISTEN      17816/sshd<br>tcp6       0      0 :::22                   :::</em>                    LISTEN      17816/sshd<br>第三步</p><p>#####接下来便可使用终端仿真程序（例如putty）去登陆远程主机<br>如果你在客户端不能连接SSH服务的话，那可能是防火墙的原因，终端命令行中输入 iptables -nL 来看是否开放了ssh tcp 22 端口：<br>[root@localhost ~]# iptables -nL<br>你可以将防火墙中的规则条目清除掉：<br>[root@localhost ~]# iptables -F</p><h5 id="客户端使用"><a href="#客户端使用" class="headerlink" title="客户端使用"></a>客户端使用</h5><p>ssh <a href="mailto:username@192.168.2.194" target="_blank" rel="noopener">username@192.168.2.194</a><br>或者mac本使用secureCrt</p><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>碰到了刚开始重启不成功，一直显示watchdog watchdog0: watchdog did not stop!<br>然后更新了系统，然后重启还是有这个日志，不过会重启成功了。不行就直接按电源！</p><h2 id="centos7-笔记本关系合盖睡眠"><a href="#centos7-笔记本关系合盖睡眠" class="headerlink" title="centos7 笔记本关系合盖睡眠"></a>centos7 笔记本关系合盖睡眠</h2><p>由于是笔记本，经常需要关闭盖子，但是不能让他休眠！<br>参考 <a href="https://blog.csdn.net/qq_34911465/article/details/70246193" target="_blank" rel="noopener">https://blog.csdn.net/qq_34911465/article/details/70246193</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">动作包括：</span><br><span class="line">HandlePowerKey：按下电源键后的动作</span><br><span class="line">HandleSleepKey：按下挂起键后的动作</span><br><span class="line">HandleHibernateKey: 按下休眠键后的动作</span><br><span class="line">HandleLidSwitch：合上笔记本盖后待机</span><br><span class="line"></span><br><span class="line">这些动作的值可以是</span><br><span class="line">ignore（什么都不做）</span><br><span class="line">poweroff（关机）</span><br><span class="line">reboot（重新启动）</span><br><span class="line">halt（关机，和poweroff有什么区别，需要手动断开电源？）</span><br><span class="line">suspend（待机挂起）</span><br><span class="line">hibernate（休眠）</span><br><span class="line">默认情况是，当我合上笔记本屏幕的时候，系统会待机。</span><br><span class="line">如果我不想让系统在我合上笔记本的时候待机，怎么办呢？</span><br><span class="line"></span><br><span class="line">用vi编辑器打开 /etc/systemd/logind.conf</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">去掉HandleLidSwitch前面的注释符号#，并把它的值从suspend修改为ignore。</span><br><span class="line">[Login]</span><br><span class="line">#NAutoVTs=6</span><br><span class="line">#ReserveVT=6</span><br><span class="line">#KillUserProcesses=no</span><br><span class="line">#KillOnlyUsers=</span><br><span class="line">#KillExcludeUsers=root</span><br><span class="line">#InhibitDelayMaxSec=5</span><br><span class="line">#HandlePowerKey=poweroff</span><br><span class="line">#HandleSuspendKey=suspend</span><br><span class="line">#HandleHibernateKey=hibernate</span><br><span class="line">HandleLidSwitch=ignore</span><br><span class="line">#HandleLidSwitchDocked=ignore</span><br><span class="line">#PowerKeyIgnoreInhibited=no</span><br><span class="line">#SuspendKeyIgnoreInhibited=no</span><br><span class="line">#HibernateKeyIgnoreInhibited=no</span><br><span class="line">#LidSwitchIgnoreInhibited=yes</span><br><span class="line">#IdleAction=ignore</span><br><span class="line">#IdleActionSec=30min</span><br><span class="line">#RuntimeDirectorySize=10%</span><br><span class="line">#RemoveIPC=no</span><br><span class="line">~</span><br></pre></td></tr></table></figure><p>然后systemctl restart systemd-logind，使更改生效。再合上笔记本盖子，也不会待机了。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如何使用U盘安装centos&lt;br&gt;自从换了mac本之后，Windows本就很少用了，本来便宜卖给兄弟的，但是嫂子嫌弃太沉了。就一直搁置着，现在因为需要学习些东西，需要将他搞成Linux，因为自己的服务器也是centos的，所以就装的centos，然后再搞一个内网穿透外网就ok了。踩了不少坑，下面把步骤列出来&lt;br&gt;
+    
+    </summary>
+    
+      <category term="centos" scheme="http://www.dddjava.com/categories/centos/"/>
+    
+    
+      <category term="system" scheme="http://www.dddjava.com/tags/system/"/>
+    
+      <category term="centos" scheme="http://www.dddjava.com/tags/centos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>代码开源协议怎么选择</title>
+    <link href="http://www.dddjava.com/openSource%20License.html"/>
+    <id>http://www.dddjava.com/openSource License.html</id>
+    <published>2018-11-08T18:36:19.000Z</published>
+    <updated>2019-08-01T02:23:06.985Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>想开源自己的代码了<br><a id="more"></a></p><h2 id="怎么配置开源协议"><a href="#怎么配置开源协议" class="headerlink" title="怎么配置开源协议"></a>怎么配置开源协议</h2><p>1.自己的协议，放到项目根目录下<br>2.如果是整个文件包都是引用的，那么根目录放上协议<br>3.后续如果可以的话对应的类也要搞一下，写上协议</p><h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><img src="https://i.loli.net/2019/06/10/5cfe14bdd7c0591693.jpg" alt=""></p><p><a href="https://www.jianshu.com/p/cceeafb019ed" target="_blank" rel="noopener">https://www.jianshu.com/p/cceeafb019ed</a><br><a href="https://segmentfault.com/q/1010000000126507" target="_blank" rel="noopener">https://segmentfault.com/q/1010000000126507</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;想开源自己的代码了&lt;br&gt;
+    
+    </summary>
+    
+      <category term="oss License" scheme="http://www.dddjava.com/categories/oss-License/"/>
+    
+    
+      <category term="开源" scheme="http://www.dddjava.com/tags/%E5%BC%80%E6%BA%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客-程序员的笔记工具+日历工具</title>
+    <link href="http://www.dddjava.com/programmer_tool.html"/>
+    <id>http://www.dddjava.com/programmer_tool.html</id>
+    <published>2018-11-07T15:40:27.000Z</published>
+    <updated>2019-08-01T02:23:06.985Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="20181228新需求"><a href="#20181228新需求" class="headerlink" title="20181228新需求"></a>20181228新需求</h1><p>这不又开始自己作了。冬天骑车太冷了，坐地铁得看点东西，但是mweb使用icloud或者Dropbox同步都有问题，要么同步成功了，但是搜索功能挂了。就想找一款软件，但是比如bear，还有另外的，都是订阅模式收费的,不能买断，这就比较坑了，现在付费的我用的比较好的就是印象笔记了。<br><a id="more"></a><br>自己的要求：</p><ul><li>文档可以都是一个目录下</li><li>我们看到的可以自己定义目录，然后路径，最好有3层目录。</li><li>支持ios，mac</li></ul><p>mweb：<br>优点：</p><ul><li>层级目录方便</li><li>ios免费</li><li>图片处理很方便</li><li>支持图床</li><li>导出方便</li></ul><p>缺点：</p><ul><li>东西多了还是比较乱</li><li>个人软件，更新不频繁，issue处理不太好。也是收费软件。</li></ul><p>bear等</p><p>缺点：<br>订阅收费</p><p>印象笔记</p><p>优点：</p><ul><li>现在由中国自己的公司独立运营，因此md支持的非常好，所以开发速度快了很多</li></ul><p>缺点：</p><ul><li>臃肿</li><li>要是有支持图床就好了</li><li>层级目录真是渣渣（现在自己的方法就是统一前缀）</li></ul><p>后来想了一下，想自己做个软件，两种方案：</p><ul><li>ios原生开发个软件，同步使用icloud，然后电脑端使用随便软件编辑都行，ios端，只要查看就行了，然后自己随笔都记录在印象笔记中</li><li>使用自己的服务器，需要前端+后端合作开发，同步的话使用Dropbox客户端就行了，然后快速编译发布成服务，相当于自己的wiki，有许多不错的wiki，不过自己想的是需要账号登录，所以还需要开发，像confluence那种麻烦点，我那服务器内存根本吃不消。</li></ul><p>但是如果开发工作量大概需要15人日，而且ios我不会，前端还得找人或者现学。<br>所以退而求其次，<br>继续使用印象笔记+新浪图床+things3+日历+icloud+备忘录。</p><h1 id="在找寻的做成中发现的一些不错的东西"><a href="#在找寻的做成中发现的一些不错的东西" class="headerlink" title="在找寻的做成中发现的一些不错的东西"></a>在找寻的做成中发现的一些不错的东西</h1><ul><li>如果对于需求不是很高的人，我认为在ios上写md是没有必要的。</li><li>在以前印象笔记不支持md的时候，使用的都是马克飞象，实际上马克飞象也是中国的印象笔记团队开发的 <a href="https://www.zhihu.com/question/20086835" target="_blank" rel="noopener">https://www.zhihu.com/question/20086835</a></li><li>一个使用系统备忘录的哥们，在抉择好久之后，<a href="https://sspai.com/post/36991" target="_blank" rel="noopener">https://sspai.com/post/36991</a></li><li>还有个语雀，这个吧是阿里的，今年开放的，说是内部平台，但是实际上，还是比较简陋，为什么这么说，就是没有把他当成一个产品做，就是我开源了，你们用用，给人的感觉很随意，生态很差，导入导出，手机客户端等等，不易用等等。</li></ul><h1 id="20181228-分隔符"><a href="#20181228-分隔符" class="headerlink" title="20181228 分隔符"></a>20181228 分隔符</h1><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>最近需要做一个长期计划，85天的计划，而且前段时间使用mac的fantastic，有个问题就是，对于每日的任务处理不太好，虽然也支持repeat事件，但是每天都一片红，太丑了。所以找了好多，又找回了曾经没细看过的things软件，mac上有破解版的。<br>但是ios的比较难搞，还好后来找人弄了个账号，主要是比较贵，先用用，后续打折买个。<br>下面说历程：</p><hr><p>下载了omnifocus</p><ul><li>不喜欢页面</li><li>不喜欢页面</li><li>主要是不符合那种简单明了的感觉<br>pass</li></ul><hr><p>知乎 <a href="https://www.zhihu.com/question/19575291" target="_blank" rel="noopener">https://www.zhihu.com/question/19575291</a> 上面提到了好多，但是吧，虽然提到了很多免费的软件（免费的最贵），除了不支持同步，就是功能不全，很麻烦，而且很丑。</p><hr><p>然后下载了mac版本的things，嗯嗯嗯，很对口味，找不到破解版的可以找我。支持每天日志记录，支持读取日历，而且很漂亮。就他了。</p><h2 id="我的笔记工具，日历工具汇总"><a href="#我的笔记工具，日历工具汇总" class="headerlink" title="我的笔记工具，日历工具汇总"></a>我的笔记工具，日历工具汇总</h2><ul><li>平常剪切网页：印象笔记，续费了几年，建议便宜的时候就多买1年。我上次续费就是原价买的，哎。</li><li>账号记录：印象笔记，主要是搜索功能强大；</li><li>常用的网页备份：印象笔记，万一哪天原作者不小心删除了呢？对吧，而且有一些很好的教程，比如怎么搭建ss这种，人家都写的很好了，自己就没有必要写了，因此直接印象剪切，贼方便</li><li>自己知识，提纲整理：mweb，因为这就会让你产生一种感觉，就是这个东西是要给人看的，所以我都做的很规矩。比如现在写博客，都是用mweb写。目录支持好，md支持非常好，可以一键上传到图床。</li><li>每天要做的事情：fantastic 2，但是有一个缺点，比如，每天要做的事情，泡脚啊，给电驴充电啊，就每天挪来挪去很麻烦。</li><li>做长期计划：找了不少，也有meistertask，omnifocus这种，但是和我的日历软件整合度不够，因此选择了things。</li><li>提高效率：自己如果在活少的时候，很容易玩手机，无意中发现了番茄效率法，很好使，对于我这种拖延症。mac上用的番茄土豆工具，然后耳机用的白噪音，效率非常高。<a href="https://www.rainymood.com/" target="_blank" rel="noopener">https://www.rainymood.com/</a></li></ul><h2 id="这里只说缺点，优点很多的"><a href="#这里只说缺点，优点很多的" class="headerlink" title="这里只说缺点，优点很多的"></a>这里只说缺点，优点很多的</h2><ul><li>印象，层级目录支持的不是很好，所以只做知识仓库，汇总用mweb</li><li>quiver吧，太紧凑，编排，不好看，层级目录设计的不好，就是没有目录的感觉，废弃</li><li>vscode不适合写文档，用来处理非java代码比较好</li></ul><h2 id="代码工具，顺便提一句"><a href="#代码工具，顺便提一句" class="headerlink" title="代码工具，顺便提一句"></a>代码工具，顺便提一句</h2><ul><li>java当然是idea啊<br>由于现在注册码比较难搞，好多注册机，网页那种都不好使了，而且自己用的mac的，不要用那种替换jar的方式，有一种方法一劳永逸<br>tb找到一个销量最高的商家，找不到找我，你自己注册一个账号，idea的，然后他帮你买一个学生版的idea一年，全家桶都能用了，然后直接用你的账号填充到idea里面就ok了，这个是最官方的形式。<h2 id="things-教程"><a href="#things-教程" class="headerlink" title="things 教程"></a>things 教程</h2></li><li><a href="https://www.ifanr.com/app/842145" target="_blank" rel="noopener">https://www.ifanr.com/app/842145</a> </li><li><a href="https://sspai.com/post/32965" target="_blank" rel="noopener">https://sspai.com/post/32965</a></li><li><a href="https://www.ifanr.com/app/473344" target="_blank" rel="noopener">https://www.ifanr.com/app/473344</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;20181228新需求&quot;&gt;&lt;a href=&quot;#20181228新需求&quot; class=&quot;headerlink&quot; title=&quot;20181228新需求&quot;&gt;&lt;/a&gt;20181228新需求&lt;/h1&gt;&lt;p&gt;这不又开始自己作了。冬天骑车太冷了，坐地铁得看点东西，但是mweb使用icloud或者Dropbox同步都有问题，要么同步成功了，但是搜索功能挂了。就想找一款软件，但是比如bear，还有另外的，都是订阅模式收费的,不能买断，这就比较坑了，现在付费的我用的比较好的就是印象笔记了。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.dddjava.com/categories/tool/"/>
+    
+    
+      <category term="工具" scheme="http://www.dddjava.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决图床问题-坑爹的“免费”七牛云</title>
+    <link href="http://www.dddjava.com/img.html"/>
+    <id>http://www.dddjava.com/img.html</id>
+    <published>2018-10-26T10:21:16.000Z</published>
+    <updated>2019-08-01T02:23:06.985Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>原来按照好多教程，使用了七牛云的图床，不错，但是正因为是免费的，域名失效了！！！然后图片全都不行了，只能寻找新的图床，历经挫折。下面将我的解决方案分享出来；<br><a id="more"></a><br><img src="https://i.loli.net/2019/06/10/5cfe14c5854dc16640.jpg" alt=""></p><p>亏我当时还起的名字我爱七牛<br><img src="https://i.loli.net/2019/06/10/5cfe14c5d370269256.jpg" alt=""></p><p>我这没有beian的域名绑定这个干啥，很麻烦。。。图片还能访问（不知道是否因为cdn的关系），就是上传不了。<br>环境：<br>mac<br>mweb</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="新浪图床"><a href="#新浪图床" class="headerlink" title="新浪图床"></a>新浪图床</h3><p>本来找了一个github的代码，自己本地起个服务，但是，后来坐着没更新了，npm编译失败，版本的问题，js又不太熟悉，只能另寻办法，php代码不少，但是也看不懂，最后终于用关键词在github上找了一个java代码，2018版本的，然后试了一下ok【源码的方案，我会改进的，由于新浪没有公开提供api，都是抓取的】。不过后来又找了一下，有了新的解决方案；<br> <img src="https://i.loli.net/2019/06/10/5cfe14c63cb2588687.jpg" alt=""></p><p>使用ipic软件，下载下来之后，安装mover插件，不付费版本只有新浪图床，够用了，其他的图床有别的解决方案（因为都api都开发，很好写）<br>    使用ipicMover扫描之后，可以将我这七牛的迁移过来<br>    <img src="https://i.loli.net/2019/06/10/5cfe14c6c43be14537.jpg" alt="-w681"><br>    因此，对于我来说，在mweb写完博客之后，使用mweb上传到新浪（可以使用代码），然后copy包含新浪地址的md到hexo中（因为自己都是保留原图到Dropbox中的）。<br>    <img src="https://i.loli.net/2019/06/10/5cfe14c7abe0990777.jpg" alt="-w747"><br>    然后直接提交代码就ok了。（上图就是替换七牛的地址）</p><pre><code>如果没有本地新浪api上传的话，可以copy这个文章，然后使用ipic扫描，这样的话就会替换地址，然后copy到hexo中就ok了。</code></pre><h3 id="第三方图床"><a href="#第三方图床" class="headerlink" title="第三方图床"></a>第三方图床</h3><h2 id="如何选择图床"><a href="#如何选择图床" class="headerlink" title="如何选择图床"></a>如何选择图床</h2><p> 因为自己的服务器是github，因此尽量内网和外网都能访问<br> <a href="http://bangumi.tv/group/topic/343056" target="_blank" rel="noopener">http://bangumi.tv/group/topic/343056</a> 这个网址是作者评测，就是没有小电视的国内访问不了。所以，想自己定义api的可以使用这些图床<br> <img src="https://i.loli.net/2019/06/10/5cfe14cda669089858.jpg" alt=""><br> 像上图好多都是免费的，极简图床，api是收费的。如果懂代码的话，建议自己开发一下。不算难。</p><h2 id="好用的一些网址，以及自己怎么使用这些图床"><a href="#好用的一些网址，以及自己怎么使用这些图床" class="headerlink" title="好用的一些网址，以及自己怎么使用这些图床"></a>好用的一些网址，以及自己怎么使用这些图床</h2><p>catbox.moe 这个自己实现了文件上传，最笨的方法，就是Chrome开启开发组模式，然后使用postman模拟，然后copypostman的code（postman是可以根据语言生成代码的），后来发现对方开放了api；</p><p><img src="https://i.loli.net/2019/06/10/5cfe14cdec05575999.jpg" alt=""></p><h2 id="参考的网址"><a href="#参考的网址" class="headerlink" title="参考的网址"></a>参考的网址</h2><ul><li><a href="https://sspai.com/post/40499" target="_blank" rel="noopener">https://sspai.com/post/40499</a> 里面有Windows的和ipic类似的工具</li><li><a href="http://www.cnblogs.com/fengwbetter/fengwbetter/p/9107742.html" target="_blank" rel="noopener">http://www.cnblogs.com/fengwbetter/fengwbetter/p/9107742.html</a> Python的登录微博参考，不过自己对Python不熟悉。</li><li><a href="https://cloud.tencent.com/developer/article/1152353" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1152353</a> php版本，使用session上传图片的</li><li><a href="https://github.com/xx13295/sina-picbed" target="_blank" rel="noopener">https://github.com/xx13295/sina-picbed</a> 新浪图床java代码。</li><li><a href="https://github.com/Suxiaogang/WeiboPicBed" target="_blank" rel="noopener">https://github.com/Suxiaogang/WeiboPicBed</a> 新浪图床Chrome扩展</li><li><a href="https://www.v2ex.com/t/473771" target="_blank" rel="noopener">https://www.v2ex.com/t/473771</a> v站的图床推荐。</li><li><a href="https://github.com/qiniu/qshell/issues/188" target="_blank" rel="noopener">https://github.com/qiniu/qshell/issues/188</a> 七牛图床域名过期的问题。</li><li><a href="https://invisprints.wordpress.com/2017/12/10/uploadpicinweibo/" target="_blank" rel="noopener">https://invisprints.wordpress.com/2017/12/10/uploadpicinweibo/</a> js的新浪图床，有大佬懂js的可以改改支持一下现在最新的npm啥的。</li></ul><h2 id="如果使用自己的微博账号，微博上传失败的话，需要关闭微博地址验证；"><a href="#如果使用自己的微博账号，微博上传失败的话，需要关闭微博地址验证；" class="headerlink" title="如果使用自己的微博账号，微博上传失败的话，需要关闭微博地址验证；"></a>如果使用自己的微博账号，微博上传失败的话，需要关闭微博地址验证；</h2><h2 id="如果只是简单的一两张图片上传，可以使用Chrome的扩展，搜索图床，有不少微博的插件。"><a href="#如果只是简单的一两张图片上传，可以使用Chrome的扩展，搜索图床，有不少微博的插件。" class="headerlink" title="如果只是简单的一两张图片上传，可以使用Chrome的扩展，搜索图床，有不少微博的插件。"></a>如果只是简单的一两张图片上传，可以使用Chrome的扩展，搜索图床，有不少微博的插件。</h2><h2 id="图床想找总能找到的，就是麻烦，不行就自己搞个服务器。"><a href="#图床想找总能找到的，就是麻烦，不行就自己搞个服务器。" class="headerlink" title="图床想找总能找到的，就是麻烦，不行就自己搞个服务器。"></a>图床想找总能找到的，就是麻烦，不行就自己搞个服务器。</h2><h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>自己使用上面的java代码，本地启动服务，然后使用mweb上传到图床服务器，copy代码，在hexo中新建博客。然后commit，部署，自动继承编译就ok了。</p><p>已经开放源码和第一版<br>源码地址：<br><a href="https://github.com/RMzcq/dddjava" target="_blank" rel="noopener">https://github.com/RMzcq/dddjava</a><br>下载源码自己编译，或者从如下地址下载：<a href="https://u3492574.ctfile.com/fs/3492574-319064523" target="_blank" rel="noopener">https://u3492574.ctfile.com/fs/3492574-319064523</a></p><ul><li>首先配置bootstrap.yml中的新浪用户名密码，记得关闭新浪双重验证</li><li>运行jar包 java -jar jar名称</li><li>配置地址 <a href="http://127.0.0.1:8089/file/uploadFileToSina" target="_blank" rel="noopener">http://127.0.0.1:8089/file/uploadFileToSina</a><br>参数为file 类型为file，可以使用postman或者mweb测试一下。然后就能使用啦！如果使用mweb的话，返回的参数取data，这个就是上传后的url路径</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;原来按照好多教程，使用了七牛云的图床，不错，但是正因为是免费的，域名失效了！！！然后图片全都不行了，只能寻找新的图床，历经挫折。下面将我的解决方案分享出来；&lt;br&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.dddjava.com/categories/tool/"/>
+    
+    
+      <category term="【图床,新浪图床】" scheme="http://www.dddjava.com/tags/%E3%80%90%E5%9B%BE%E5%BA%8A-%E6%96%B0%E6%B5%AA%E5%9B%BE%E5%BA%8A%E3%80%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决google driver 开了代理(ss)之后也报错的问题</title>
+    <link href="http://www.dddjava.com/googleDriver%20problem1.html"/>
+    <id>http://www.dddjava.com/googleDriver problem1.html</id>
+    <published>2018-10-19T17:51:33.000Z</published>
+    <updated>2019-08-01T02:23:06.985Z</updated>
+    
+    <content type="html"><![CDATA[<p>问题困扰了很久，但是也找不到解决版本，后来使用关键字搜索到了。使用命令行的方式不建议，一是维护麻烦，而是不太懂。。。<br><a id="more"></a><br><img src="https://i.loli.net/2019/06/10/5cfe14ce44dd036758.jpg" alt=""><br>自己的ss-ng默认开启了http和socket啊，但是不行，据说google drive 无法识别http proxy以外的proxy</p><h2 id="下载-proxifier，有码的，这个可以自己找"><a href="#下载-proxifier，有码的，这个可以自己找" class="headerlink" title="下载 proxifier，有码的，这个可以自己找"></a>下载 proxifier，有码的，这个可以自己找</h2><h2 id="需要在隐私中允许一下"><a href="#需要在隐私中允许一下" class="headerlink" title="需要在隐私中允许一下"></a>需要在隐私中允许一下</h2><h2 id="添加-proxies，我的是ss-ng，因此添加"><a href="#添加-proxies，我的是ss-ng，因此添加" class="headerlink" title="添加 proxies，我的是ss-ng，因此添加"></a>添加 proxies，我的是ss-ng，因此添加</h2><p><img src="https://i.loli.net/2019/06/10/5cfe14cea304a20916.jpg" alt=""></p><p>然后规则就有了，这个时候driver就可以用了，不过这个时候mac的所有应用请求都走的这个，得更改一下。<br>删掉其他的配置，没有用，也不用下载github的配置，因为最终还得走ss代理。下图中的各个项不明白的可以问我，比较简单就没介绍。按图配置就ok了。<br><img src="https://i.loli.net/2019/06/10/5cfe14d4850b081688.jpg" alt=""></p><p>参考说是打上这个勾勾，可以防止dns污染。<br><img src="https://i.loli.net/2019/06/10/5cfe14d4dfc2285768.jpg" alt=""><br>别的就没有了，很简单。</p><h2 id="两个不错参考的网址"><a href="#两个不错参考的网址" class="headerlink" title="两个不错参考的网址"></a>两个不错参考的网址</h2><ul><li><a href="http://blog.batesma.com/20170811-google-drive-proxy-solved/" target="_blank" rel="noopener">http://blog.batesma.com/20170811-google-drive-proxy-solved/</a></li><li><a href="https://www.jianshu.com/p/91a7c17f4a0e" target="_blank" rel="noopener">https://www.jianshu.com/p/91a7c17f4a0e</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;问题困扰了很久，但是也找不到解决版本，后来使用关键字搜索到了。使用命令行的方式不建议，一是维护麻烦，而是不太懂。。。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.dddjava.com/categories/tool/"/>
+    
+    
+      <category term="google driver" scheme="http://www.dddjava.com/tags/google-driver/"/>
+    
+      <category term="ss" scheme="http://www.dddjava.com/tags/ss/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2.executorService</title>
+    <link href="http://www.dddjava.com/null.html"/>
+    <id>http://www.dddjava.com/null.html</id>
+    <published>2018-10-18T22:55:16.000Z</published>
+    <updated>2019-08-01T02:23:06.985Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="类翻译"><a href="#类翻译" class="headerlink" title="类翻译"></a>类翻译</h2><p>一个executor 可以提供方法来处理终止和产生一个 future 来记录一个或多个异步任务的进度。（mark，executor目前只是一个接口，目前还做不到。。。）<br>一个executorService可以被关闭，这将会导致它拒绝新的任务。ExecutorServie提供了两个关闭方法。shutdown 方法在终止之前允许先前提交的任务执行完。shutdownNow 方法阻止等待的任务启动 并且尝试停止当前正在执行的任务。一旦终止，Executor没有执行中的任务，没有等待中的任务，没有新任务可以提交。<a id="more"></a>一个未被使用的ExecutorService应该被关闭来回收它的资源。<br>submit 方法扩展了 Executor的基本方法 execute，通过创建并返回Future，Future可以用来取消执行 和/或者 等待（执行）完成。invokeAny 和 invokeAll 方法 是执行最通用的，有用的集合执行形式。执行集合任务，然后等待至少一个或全部完成。ExecutorCompletionService可以被用来编写这些方法的定制变体。<br>Executors 为executor Service提供了方便的工厂方法。（mark：executor是也为executor提供了工厂）<br>使用示例：<br>这里有一个网络服务的草图，其中线程在线程池中来处理请求，他使用了预配置工厂方法（newFixedThreadPool）。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">*  &lt;pre&gt; &#123;@code</span><br><span class="line">* class NetworkService implements Runnable &#123;</span><br><span class="line">*   private final ServerSocket serverSocket;</span><br><span class="line">*   private final ExecutorService pool;</span><br><span class="line">*</span><br><span class="line">*   public NetworkService(int port, int poolSize)</span><br><span class="line">*       throws IOException &#123;</span><br><span class="line">*     serverSocket = new ServerSocket(port);</span><br><span class="line">*     pool = Executors.newFixedThreadPool(poolSize);</span><br><span class="line">*   &#125;</span><br><span class="line">*</span><br><span class="line">*   public void run() &#123; // run the service</span><br><span class="line">*     try &#123;</span><br><span class="line">*       for (;;) &#123;</span><br><span class="line">*         pool.execute(new Handler(serverSocket.accept()));</span><br><span class="line">*       &#125;</span><br><span class="line">*     &#125; catch (IOException ex) &#123;</span><br><span class="line">*       pool.shutdown();</span><br><span class="line">*     &#125;</span><br><span class="line">*   &#125;</span><br><span class="line">* &#125;</span><br><span class="line">*</span><br><span class="line">* class Handler implements Runnable &#123;</span><br><span class="line">*   private final Socket socket;</span><br><span class="line">*   Handler(Socket socket) &#123; this.socket = socket; &#125;</span><br><span class="line">*   public void run() &#123;</span><br><span class="line">*     // read and service request on socket</span><br><span class="line">*   &#125;</span><br><span class="line">* &#125;&#125;&lt;/pre&gt;</span><br></pre></td></tr></table></figure><p>以下方法分为两个阶段关闭 ExecutorService，第一步通过 shutdown 来拒绝传入的任务，然后调用 shutdownNow ，如果必要的话，可以用来取消任何延迟任务。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">*  &lt;pre&gt; &#123;@code</span><br><span class="line">* void shutdownAndAwaitTermination(ExecutorService pool) &#123;</span><br><span class="line">*   pool.shutdown(); // 禁止提交新任务</span><br><span class="line">*   try &#123;</span><br><span class="line">*     // 等待现有任务终止</span><br><span class="line">*     if (!pool.awaitTermination(60, TimeUnit.SECONDS)) &#123;</span><br><span class="line">*       pool.shutdownNow(); // 取消当前正在执行的任务</span><br><span class="line">*       // 等待一会让任务来反馈是否被取消了</span><br><span class="line">*       if (!pool.awaitTermination(60, TimeUnit.SECONDS))</span><br><span class="line">*           System.err.println(&quot;Pool did not terminate&quot;);</span><br><span class="line">*     &#125;</span><br><span class="line">*   &#125; catch (InterruptedException ie) &#123;</span><br><span class="line">*     // （重新）取消如果当前线程被中断</span><br><span class="line">*     pool.shutdownNow();</span><br><span class="line">*     // 保留当前线程中断状态</span><br><span class="line">*     Thread.currentThread().interrupt();</span><br><span class="line">*   &#125;</span><br><span class="line">* &#125;&#125;&lt;/pre&gt;</span><br></pre></td></tr></table></figure><p>内存一致性效果：和executor一样。</p><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>todo 最近时间比较紧，尽力而为</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;类翻译&quot;&gt;&lt;a href=&quot;#类翻译&quot; class=&quot;headerlink&quot; title=&quot;类翻译&quot;&gt;&lt;/a&gt;类翻译&lt;/h2&gt;&lt;p&gt;一个executor 可以提供方法来处理终止和产生一个 future 来记录一个或多个异步任务的进度。（mark，executor目前只是一个接口，目前还做不到。。。）&lt;br&gt;一个executorService可以被关闭，这将会导致它拒绝新的任务。ExecutorServie提供了两个关闭方法。shutdown 方法在终止之前允许先前提交的任务执行完。shutdownNow 方法阻止等待的任务启动 并且尝试停止当前正在执行的任务。一旦终止，Executor没有执行中的任务，没有等待中的任务，没有新任务可以提交。
+    
+    </summary>
+    
+      <category term="concurrency" scheme="http://www.dddjava.com/categories/concurrency/"/>
+    
+    
+      <category term="并发" scheme="http://www.dddjava.com/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+      <category term="concurrency" scheme="http://www.dddjava.com/tags/concurrency/"/>
+    
+      <category term="executorService" scheme="http://www.dddjava.com/tags/executorService/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1.executor</title>
+    <link href="http://www.dddjava.com/executor.html"/>
+    <id>http://www.dddjava.com/executor.html</id>
+    <published>2018-10-18T22:52:39.000Z</published>
+    <updated>2019-08-01T02:23:06.985Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="类翻译："><a href="#类翻译：" class="headerlink" title="类翻译："></a>类翻译：</h2><p>这是一个执行提交的任务（Runnable）的对象。这个接口提供了一种解决任务提交的方法，就是每个任务如何运行的机制，包括线程如何使用的详情，调度等等。executor经常被用来替代 显示的创建线程。比如，<br>对于每个线程，我们不用使用<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new Thread(new(RunnableTask())).start()</span><br></pre></td></tr></table></figure></p><p>我们可以使用</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* &lt;pre&gt;</span><br><span class="line"> * Executor executor = &lt;em&gt;anExecutor&lt;/em&gt;;</span><br><span class="line"> * executor.execute(new RunnableTask1());</span><br><span class="line"> * executor.execute(new RunnableTask2());</span><br><span class="line"> * ...</span><br><span class="line"> * &lt;/pre&gt;</span><br></pre></td></tr></table></figure><p>然而，executor接口并不严格要求执行是异步的，在最简单的情景下，一个executor可以在调用者的线程中立即运行一个提交的任务。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*  &lt;pre&gt; &#123;@code</span><br><span class="line">* class DirectExecutor implements Executor &#123;</span><br><span class="line">*   public void execute(Runnable r) &#123;</span><br><span class="line">*     r.run();</span><br><span class="line">*   &#125;</span><br><span class="line">* &#125;&#125;&lt;/pre&gt;</span><br></pre></td></tr></table></figure><p>更典型的是，任务可以在刨除当前线程，生成其他线程来执行。下面的这个executor就产生（spawn，产卵这个词比较形象）一个新的线程对于每个任务。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*  &lt;pre&gt; &#123;@code</span><br><span class="line">* class ThreadPerTaskExecutor implements Executor &#123;</span><br><span class="line">*   public void execute(Runnable r) &#123;</span><br><span class="line">*     new Thread(r).start();</span><br><span class="line">*   &#125;</span><br><span class="line">* &#125;&#125;&lt;/pre&gt;</span><br></pre></td></tr></table></figure><p>很多executor的实现都“加上”了某种这些任务如何被调度的限制。下面的executor将任务序列化后提交到第二个executor，图解说明了复合executor。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;pre&gt; &#123;@code</span><br><span class="line"> * class SerialExecutor implements Executor &#123;</span><br><span class="line"> *   final Queue&lt;Runnable&gt; tasks = new ArrayDeque&lt;Runnable&gt;();</span><br><span class="line"> *   final Executor executor;</span><br><span class="line"> *   Runnable active;</span><br><span class="line"> *</span><br><span class="line"> *   SerialExecutor(Executor executor) &#123;</span><br><span class="line"> *     this.executor = executor;</span><br><span class="line"> *   &#125;</span><br><span class="line"> *</span><br><span class="line"> *   public synchronized void execute(final Runnable r) &#123;</span><br><span class="line"> *     tasks.offer(new Runnable() &#123;</span><br><span class="line"> *       public void run() &#123;</span><br><span class="line"> *         try &#123;</span><br><span class="line"> *           r.run();</span><br><span class="line"> *         &#125; finally &#123;</span><br><span class="line"> *           scheduleNext();</span><br><span class="line"> *         &#125;</span><br><span class="line"> *       &#125;</span><br><span class="line"> *     &#125;);</span><br><span class="line"> *     if (active == null) &#123;</span><br><span class="line"> *       scheduleNext();</span><br><span class="line"> *     &#125;</span><br><span class="line"> *   &#125;</span><br><span class="line"> *</span><br><span class="line"> *   protected synchronized void scheduleNext() &#123;</span><br><span class="line"> *     if ((active = tasks.poll()) != null) &#123;</span><br><span class="line"> *       executor.execute(active);</span><br><span class="line"> *     &#125;</span><br><span class="line"> *   &#125;</span><br><span class="line"> * &#125;&#125;&lt;/pre&gt;</span><br></pre></td></tr></table></figure><p>ps:定义了一个队列，然后添加runnable对象，然后使用另外的executor去执行队列中的对象。但是吧，我任务这个每次执行一个，不过只是demo，可以改造成一个执行运行对象的方法。</p><p>在当前包中，ExecutorService 继承了Executor，ExecutorService 是一个更广泛的接口。ThreadPoolExecutor 提供了一个可扩展的线程池实现方式。Executors 为executors提供了方便的工厂方法。</p><p>内存一致性效果：在“优先”提交一个runnable对象到executor的线程中，happens-before executor的执行操作，（这个执行操作）可能在另外的线程中；<br>ps:没太懂，这里讲这个的意思，虽然知道happens-before原则，但是不太理解这里，有了解的可以私信我，或者留言。</p><h2 id="方法翻译"><a href="#方法翻译" class="headerlink" title="方法翻译"></a>方法翻译</h2><p>整个接口只有一个方法：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void execute(Runnable command);</span><br></pre></td></tr></table></figure><p>ps:没有返回值，只有一个runnable对象。</p><p>在将来的某个时间点，执行赋予的runnable，这个runnable可能在一个新线程，在一个线程池中的线程，或者在一个被调用的线程执行，不过这个由实现自己决定。<br>会抛出两种异常 </p><ul><li>RejectedExecutionException，task不被executor接受</li><li>NullPointerException runnable 为空异常</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;类翻译：&quot;&gt;&lt;a href=&quot;#类翻译：&quot; class=&quot;headerlink&quot; title=&quot;类翻译：&quot;&gt;&lt;/a&gt;类翻译：&lt;/h2&gt;&lt;p&gt;这是一个执行提交的任务（Runnable）的对象。这个接口提供了一种解决任务提交的方法，就是每个任务如何运行的机制，包括线程如何使用的详情，调度等等。executor经常被用来替代 显示的创建线程。比如，&lt;br&gt;对于每个线程，我们不用使用&lt;br&gt;
+    
+    </summary>
+    
+      <category term="concurrency" scheme="http://www.dddjava.com/categories/concurrency/"/>
+    
+    
+      <category term="并发" scheme="http://www.dddjava.com/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+      <category term="concurrency" scheme="http://www.dddjava.com/tags/concurrency/"/>
+    
+      <category term="executor" scheme="http://www.dddjava.com/tags/executor/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>concurrent包解析，翻译</title>
+    <link href="http://www.dddjava.com/concurrentTranslate.html"/>
+    <id>http://www.dddjava.com/concurrentTranslate.html</id>
+    <published>2018-10-18T22:45:50.000Z</published>
+    <updated>2019-08-01T02:23:06.985Z</updated>
+    
+    <content type="html"><![CDATA[<p>版本记录</p><h3 id="刚开始第一版使用了ps注解翻译者（我）的一些疑问，标记"><a href="#刚开始第一版使用了ps注解翻译者（我）的一些疑问，标记" class="headerlink" title="刚开始第一版使用了ps注解翻译者（我）的一些疑问，标记"></a>刚开始第一版使用了ps注解翻译者（我）的一些疑问，标记</h3><h3 id="第二版使用mark这个标记，为了更好的区分"><a href="#第二版使用mark这个标记，为了更好的区分" class="headerlink" title="第二版使用mark这个标记，为了更好的区分"></a>第二版使用mark这个标记，为了更好的区分</h3><p>我本人比较笨，学并发也比较恼火，想了一下，还是翻译一下吧，欢迎大家指正，监督。<br>邮箱：<a href="mailto:jingtingchangqing@163.com" target="_blank" rel="noopener">jingtingchangqing@163.com</a><br>jdk版本:1.8<br>工具:idea<br><a id="more"></a><br>翻译:google，我还是会尽量按照原文翻译，不会打乱顺序，挺喜欢倒装句的，有阅读能力的建议看原文，真的很赏心悦目。翻译的东西，原作版权归原作者所有。其他版权详情见文章末尾。</p><h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><p>基于类的注解翻译<br>基于各个方法的翻译<br>产生了很大的疑虑，就是怎么做这个东西，这个系列讲解的就是材料，而我们经常看到的实际上是工具，是如何使用它们，这样的话就会形成一系列规范。<br>现在想从这里了解一下。</p><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>找到对应的concurrent包，单击右键，选择<img src="https://i.loli.net/2019/06/10/5cfe14bf8166278111.jpg" alt=""><br>下面的show diagram，然后生成了一个uml图<br><img src="https://i.loli.net/2019/06/10/5cfe14c00069c83569.jpg" alt=""></p><p>有一个比较有毒的点，就是，内部的atomic和locks没有包含在里面，所以到时候单看，看的时候很清晰明了，比较大的几个“根”，executor，blockingqueue，delayed，future，concurrentmap。剩下的都比较单了，现在看起来就很清晰明了，是不。<br>因此第一次做一个系列，有不足之处见谅。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;版本记录&lt;/p&gt;
+&lt;h3 id=&quot;刚开始第一版使用了ps注解翻译者（我）的一些疑问，标记&quot;&gt;&lt;a href=&quot;#刚开始第一版使用了ps注解翻译者（我）的一些疑问，标记&quot; class=&quot;headerlink&quot; title=&quot;刚开始第一版使用了ps注解翻译者（我）的一些疑问，标记&quot;&gt;&lt;/a&gt;刚开始第一版使用了ps注解翻译者（我）的一些疑问，标记&lt;/h3&gt;&lt;h3 id=&quot;第二版使用mark这个标记，为了更好的区分&quot;&gt;&lt;a href=&quot;#第二版使用mark这个标记，为了更好的区分&quot; class=&quot;headerlink&quot; title=&quot;第二版使用mark这个标记，为了更好的区分&quot;&gt;&lt;/a&gt;第二版使用mark这个标记，为了更好的区分&lt;/h3&gt;&lt;p&gt;我本人比较笨，学并发也比较恼火，想了一下，还是翻译一下吧，欢迎大家指正，监督。&lt;br&gt;邮箱：&lt;a href=&quot;mailto:jingtingchangqing@163.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;jingtingchangqing@163.com&lt;/a&gt;&lt;br&gt;jdk版本:1.8&lt;br&gt;工具:idea&lt;br&gt;
+    
+    </summary>
+    
+      <category term="concurrency" scheme="http://www.dddjava.com/categories/concurrency/"/>
+    
+    
+      <category term="并发" scheme="http://www.dddjava.com/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+      <category term="concurrency" scheme="http://www.dddjava.com/tags/concurrency/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>骑行 20181001总结【多图预警】</title>
+    <link href="http://www.dddjava.com/20181001riding.html"/>
+    <id>http://www.dddjava.com/20181001riding.html</id>
+    <published>2018-10-10T17:25:48.000Z</published>
+    <updated>2019-08-01T02:23:06.985Z</updated>
+    
+    <content type="html"><![CDATA[<p>今年十一骑行去了一趟山西大同，内蒙古包头，呼和浩特，乌兰察布，河北张家口，做个总结；</p><h2 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h2><p>本来计划去山东的，但是想了一下，前年去过了，而且城市中也放不开速度。就想去西边和北边，北边呼伦贝尔草原有雨，而且不安全，所以往西边走，路线如下，北京-张家口-大同-鄂尔多斯-包头-呼和浩特-乌兰察布-张家口-北京，但是由于第一天5级大风，而且爬坡过多，路线变成了<br>北京-张家口-大同-包头-呼和浩特-乌兰察布-张家口-北京（去掉了鄂尔多斯）<br><a id="more"></a></p><h2 id="走之前的准备"><a href="#走之前的准备" class="headerlink" title="走之前的准备"></a>走之前的准备</h2><h3 id="距离"><a href="#距离" class="headerlink" title="距离"></a>距离</h3><p>第一天 北京-宣化区 150<br>第二天 宣化区-大同县 150<br>第三天 大同县-内蒙古自治区呼和浩特市清水河县 186<br>第四天 内蒙古自治区呼和浩特市清水河县-鄂尔多斯 200<br>第五天 鄂尔多斯-包头 150<br>第六天 包头-呼和浩特 170<br>第七天 呼和浩特-乌兰察布 150<br>第八天 乌兰察布-张家口 170<br>第九天 张家口-家 180</p><h3 id="天气"><a href="#天气" class="headerlink" title="天气"></a>天气</h3><p>北京30 晴天 11度到20度<br>大同1  晴天 1度到20度<br>呼和浩特市2 晴天 1度到16度<br>鄂尔多斯3 4度到15度<br>包头4 中雨 16到22度<br>呼和浩特5 晴 0-14度<br>乌兰察布6 晴 -3-7度<br>张家口7 中雨转雨夹雪 1-8度</p><h3 id="忽略了一个风向"><a href="#忽略了一个风向" class="headerlink" title="忽略了一个风向"></a>忽略了一个风向</h3><h3 id="带的东西"><a href="#带的东西" class="headerlink" title="带的东西"></a>带的东西</h3><p>上衣：排汗+抓绒外套<br>下面：秋裤2条+秋季秋裤（结果发现就带了身上的一条排汗裤子，在包头零下5度冻死了）<br>包，4双袜子<br>3包纸<br>1个充电宝<br>充电线<br>灯<br>尾灯<br>低音炮+充电线<br>公司的充电头<br>心率带<br>备用2个能量胶（不够吃，第一天累死了）<br>泡腾片（不够用，导致抽筋了一次）<br>2条内胎，外胎可以带（万幸一次都没用上）<br>500块钱<br>身份证<br>一张银行卡<br>撬棍<br>打气筒<br>玉石（护身符）<br>牙刷<br>牙膏<br>冬季面罩（贼有用，零下的时候，手套是裸露手指的，用它包着手，很用用）<br>2个夏季面罩<br>多功能工具得带一下<br>油（非常有用，2天一次链条油）<br>牛肉粒（路上根本没吃，忘了）<br>洗面奶，牙刷等。</p><h2 id="北京-张家口下花园"><a href="#北京-张家口下花园" class="headerlink" title="北京-张家口下花园"></a>北京-张家口下花园</h2><p>哎，出发的时候就应该开着导航，就是走到路口从后兜里面掏出手机看的，导致的就是过八达岭的时候，走的隧道，还有有一边在修路，开着尾灯，比较安全，哎，要不然太危险了。<br>出发时的天气<br><img src="https://i.loli.net/2019/06/10/5cfe14d48572048745.jpg" alt="2018-09-30 081154"><br>到山里面有个路口风大，11点了，顶不住了，搞的驴肉火烧，一个10块钱，然后羊杂汤20<br><img src="https://i.loli.net/2019/06/10/5cfe14d574bf082616.jpg" alt="2018-09-30 110029"><br>在延庆的上升距离<br><img src="https://i.loli.net/2019/06/10/5cfe14d63af4358393.jpg" alt=""></p><p>路上赶上下小雨了<br><img src="http://ws4.sinaimg.cn/large/006tNbRwly1fwkgvfmupcj31kw16ohdu.jpg" alt="2018-09-30 121356"></p><p>下花园的宾馆，128好像是，逼格还不错，就火车站旁边，周围很方便，然后回来的时候也是这家，房间隔音好，但是这门吧，不行，第一天睡着还行，最后一天凌晨给我吵醒了，一个女的喝多了，这个叫床的声音大啊，整层楼都能听到，mmp，所以当天骑行状态一般。<br><img src="http://ws2.sinaimg.cn/large/006tNbRwly1fwkgvgt0ujj31hc0u0tmp.jpg" alt="2018-09-30 163114"><br>最终的路线<br><img src="http://ws3.sinaimg.cn/large/006tNbRwly1fwkgvjz8d1j30yi1pcqv5.jpg" alt="2018-09-30 163819"><br>爱车特别脏<br><img src="http://ws2.sinaimg.cn/large/006tNbRwly1fwkgvm13d2j30u01hcqjy.jpg" alt="2018-09-30 164946"></p><p>休息，哈哈<br><img src="http://ws1.sinaimg.cn/large/006tNbRwly1fwkgvmomdij30u01hcqjy.jpg" alt="2018-09-30 173321"></p><h2 id="张家口下花园-阳原县，没有到大同县，第二天依旧风大"><a href="#张家口下花园-阳原县，没有到大同县，第二天依旧风大" class="headerlink" title="张家口下花园-阳原县，没有到大同县，第二天依旧风大"></a>张家口下花园-阳原县，没有到大同县，第二天依旧风大</h2><p>早上7点出发，天不错，继续干<br><img src="http://ws4.sinaimg.cn/large/006tNbRwly1fwkgvsqalrj31kw23vkjm.jpg" alt="2018-10-01 065812"></p><p>晚上的小县城<br><img src="http://ws2.sinaimg.cn/large/006tNbRwly1fwkgvv3ga7j31kw23vkjm.jpg" alt="2018-10-01 183707"></p><p>住了个一楼全是打麻将的宾馆，没电梯，也是100块钱吧，就是大车多，以后不会在去山西了，万分小心，也是比较危险的。<br>晒张佳明图<br><img src="http://ws3.sinaimg.cn/large/006tNbRwly1fwkgvwk7u4j30yi1pctj4.jpg" alt=""></p><h2 id="阳原县-右玉县"><a href="#阳原县-右玉县" class="headerlink" title="阳原县-右玉县"></a>阳原县-右玉县</h2><p>路上看到的变形金刚，好看<br><img src="http://ws1.sinaimg.cn/large/006tNbRwly1fwkgw1nywtj31kw23vhdu.jpg" alt="2018-10-02 090424"></p><p>大同市好有钱，那天好多结婚的，有朋友也结婚，恭喜老姐<br><img src="http://ws3.sinaimg.cn/large/006tNbRwly1fwkgwb81stj31kw16onpf.jpg" alt="2018-10-02 111954"></p><p>来个葱爆羊肉，便宜好吃，分量足<br><img src="http://ws1.sinaimg.cn/large/006tNbRwly1fwkgwd2ialj31kw16onpf.jpg" alt="2018-10-02 113559"></p><p>不知道为啥，右玉县的宾馆全住满了，好像是周边有旅游的，只能找个小宾馆，还好，要不然，只能露宿（得冻死）或者去周边的县城了，不挑挑拣拣，及早做决定<br><img src="http://ws2.sinaimg.cn/large/006tNbRwly1fwkgwguz46j30u01hc161.jpg" alt="2018-10-02 180256"></p><p>还算干净，安静，公共厕所，卫生间，我出发早，不冲突，就是晚上隔壁的打工小哥，一直唱歌到10点，我骑行一般8点就睡觉，特累。对了，便宜的宾馆，40.<br>看到了好几支队伍，这个应该没找到，哎。<br><img src="http://ws2.sinaimg.cn/large/006tNbRwly1fwkgwljy8wj31kw23v1ky.jpg" alt="2018-10-02 183037"></p><p>跑了1km，去了南边一个面食店，便宜好吃，早上也去的旁边一个店铺，吃的病，老太太做的特好吃，酥脆好吃的。<br><img src="http://ws4.sinaimg.cn/large/006tNbRwly1fwkgwsoo8ij31kw23vu0x.jpg" alt="2018-10-02 184603"></p><p>晚上做了好多计划，到鄂尔多斯路上的没有什么县城，不方便，只能西北上包头，中间找个县城休息<br>继续佳明图<br><img src="http://ws2.sinaimg.cn/large/006tNbRwly1fwkgwubf6vj30yi1pc129.jpg" alt=""></p><h2 id="右玉县-托克托县"><a href="#右玉县-托克托县" class="headerlink" title="右玉县-托克托县"></a>右玉县-托克托县</h2><p>早上吃完老太太的饼，又打包了两个，然后豆浆放水壶中，事后发现，特有用，这豆浆顶了一天<br>杀虎口<br><img src="http://ws1.sinaimg.cn/large/006tNbRwly1fwkgx45geej31kw16o7wi.jpg" alt="2018-10-03 090604"></p><p>路上拍了好多小毛驴，特有意思，放着dj，小毛驴一直瞄着我，哈哈<br><img src="http://ws2.sinaimg.cn/large/006tNbRwly1fwkgxcu7uzj31kw23vnph.jpg" alt=""></p><p>景色完美，内蒙古南边的路况是真的优秀，是目前除了北京，山东最好的路况了，车也不多<br><img src="http://ws4.sinaimg.cn/large/006tNbRwly1fwkgxu42pdj31kw16o7wo.jpg" alt=""></p><p>这个不知道是啥植物，有啥作用，种了好多<br><img src="http://ws4.sinaimg.cn/large/006tNbRwly1fwkgy111v5j31kw16o7wo.jpg" alt=""></p><p>沟壑般的山头，爬坡累死了<br><img src="http://ws2.sinaimg.cn/large/006tNbRwly1fwkgy5k97vj31kw16ou11.jpg" alt=""></p><p>可爱的小毛驴<br><img src="http://ws1.sinaimg.cn/large/006tNbRwly1fwkgydrbm4j31kw16ox6s.jpg" alt=""><br>晚上吃了个鸡，比较好吃，<br><img src="http://ws1.sinaimg.cn/large/006tNbRwly1fwkgyj25cfj31kw23v1kz.jpg" alt=""></p><p>晚上查路线，发现南边就是黄河，离着就10km，所以打算第二天就多走点路，去看看黄河母亲，结果不虚此行<br>佳明图<br><img src="http://ws1.sinaimg.cn/large/006tNbRwly1fwkgykmp8qj30yi1pc7e5.jpg" alt=""></p><h2 id="托克托县-包头"><a href="#托克托县-包头" class="headerlink" title="托克托县-包头"></a>托克托县-包头</h2><p>黄河美景，多图，真是壮观<br><img src="http://ws2.sinaimg.cn/large/006tNbRwly1fwkgyoxfuvj31kw16ou0x.jpg" alt="2018-10-04 075520"></p><p><img src="http://ws3.sinaimg.cn/large/006tNbRwly1fwkgysi1y3j31kw23qb29.jpg" alt="2018-10-04 075534"></p><p><img src="http://ws2.sinaimg.cn/large/006tNbRwly1fwkgyx1wgzj31kw16okjl.jpg" alt="2018-10-04 080118"></p><p><img src="http://ws2.sinaimg.cn/large/006tNbRwly1fwkgz06h0zj31kw16o7wh.jpg" alt="2018-10-04 080212"></p><p><img src="http://ws2.sinaimg.cn/large/006tNbRwly1fwkgz8vcl4j31kw16oqv6.jpg" alt="2018-10-04 083016"></p><p>包头的旅馆感觉被坑了，89元，然后阴面，没有阳光，窗户一开，底下是餐馆，全是油烟，灯光还昏暗。<br>佳明图<br><img src="http://ws1.sinaimg.cn/large/006tNbRwly1fwkgzbd27bj30yi1pc48f.jpg" alt=""></p><h2 id="包头-呼和浩特"><a href="#包头-呼和浩特" class="headerlink" title="包头-呼和浩特"></a>包头-呼和浩特</h2><p>赶上下雨，只能猛干，下坡推车，哎，心疼自己的车<br><img src="http://ws3.sinaimg.cn/large/006tNbRwly1fwkgzp2dosj31kw23v4qq.jpg" alt="2018-10-05 150706"></p><p>住在回民区，环境真的很好，吃的也不错，就是冷，零下5度，呼和浩特感觉没有包头规划的好，包头好多新区<br>佳明图<br><img src="http://ws4.sinaimg.cn/large/006tNbRwly1fwkgzujo5gj30yi1pcgub.jpg" alt=""></p><h2 id="呼和浩特-乌兰察布"><a href="#呼和浩特-乌兰察布" class="headerlink" title="呼和浩特-乌兰察布"></a>呼和浩特-乌兰察布</h2><p>没啥变化，继续干，晚上撸串，太冷了，内蒙羊肉好吃<br><img src="http://ws3.sinaimg.cn/large/006tNbRwly1fwkgzxyx4ej31kw23vnpd.jpg" alt="2018-10-06 174153"><br>佳明图<br><img src="http://ws2.sinaimg.cn/large/006tNbRwly1fwkgzz4920j30yi1pcwo3.jpg" alt=""></p><h2 id="乌兰察布-下花园"><a href="#乌兰察布-下花园" class="headerlink" title="乌兰察布-下花园"></a>乌兰察布-下花园</h2><p>早上天冷，骑不快，放不开速度，零下好几度，到9点才缓过来。错误的决定，应该到宣化区就不走了，骑到6点天黑了，过山洞的时候骑行差一点晕倒，是感觉周围全是黑的，一下子感觉，人生没有了光明，像幽闭恐惧症似的，开着尾灯也没用，就几十米，我就感觉跑出去了。<br>好吃的面和菜，才17块钱<br><img src="http://ws1.sinaimg.cn/large/006tNbRwly1fwkh05d76tj31kw23v4qq.jpg" alt="2018-10-07 192916"><br>佳明图<br><img src="http://ws2.sinaimg.cn/large/006tNbRwly1fwkh06mlkzj30yi1pcn6x.jpg" alt=""></p><h2 id="下花园-家"><a href="#下花园-家" class="headerlink" title="下花园-家"></a>下花园-家</h2><p>最后一天，本来以为很快，结果，下八达岭的坡，车多，只能推车，刹车皮快磨没了，所以不敢放，坡太陡了，回家就洗澡-洗衣服-刷车，完美的一天，称称体重，瘦了9斤，今年瘦了30多斤了，完美。<br>佳明图<br><img src="http://ws1.sinaimg.cn/large/006tNbRwly1fwkh084phrj30yi1pcakg.jpg" alt=""></p><h2 id="总花费"><a href="#总花费" class="headerlink" title="总花费"></a>总花费</h2><p>每天住宿100左右，吃饭40-100，有时候吃的好，有时候不想吃，大概9天1500左右吧；</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>我为人比较严谨，做了算是充分的准备，也有几点失误，路上到乌兰察布买了点东西，增加了1.5斤的重量，不应该。秋裤带少了或者说下身应该穿抓绒的。<br>永远记住一点，安全最重要，不要和大车刚，听到大车来的时候，我都停下来，等他们过去，以后还是骑行内蒙吧，张家口到山西的车真不是盖的。<br>祝大家骑行安全，一个天通苑魅影骑行的渣渣。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今年十一骑行去了一趟山西大同，内蒙古包头，呼和浩特，乌兰察布，河北张家口，做个总结；&lt;/p&gt;
+&lt;h2 id=&quot;计划&quot;&gt;&lt;a href=&quot;#计划&quot; class=&quot;headerlink&quot; title=&quot;计划&quot;&gt;&lt;/a&gt;计划&lt;/h2&gt;&lt;p&gt;本来计划去山东的，但是想了一下，前年去过了，而且城市中也放不开速度。就想去西边和北边，北边呼伦贝尔草原有雨，而且不安全，所以往西边走，路线如下，北京-张家口-大同-鄂尔多斯-包头-呼和浩特-乌兰察布-张家口-北京，但是由于第一天5级大风，而且爬坡过多，路线变成了&lt;br&gt;北京-张家口-大同-包头-呼和浩特-乌兰察布-张家口-北京（去掉了鄂尔多斯）&lt;br&gt;
+    
+    </summary>
+    
+      <category term="骑行" scheme="http://www.dddjava.com/categories/ride/"/>
+    
+    
+      <category term="骑行" scheme="http://www.dddjava.com/tags/%E9%AA%91%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于github部署的网站，网站图标不显示，以及“您与此网站之间建立的连接不安全”的解决方案</title>
+    <link href="http://www.dddjava.com/github2.html"/>
+    <id>http://www.dddjava.com/github2.html</id>
+    <published>2018-09-24T23:17:57.000Z</published>
+    <updated>2019-08-01T02:23:06.985Z</updated>
+    
+    <content type="html"><![CDATA[<p>这个自己本来是发现这个图标怎么部署用域名访问后不安全了，然后图标还没了？</p><a id="more"></a><p><img src="https://i.loli.net/2019/06/10/5cfe14bf40b7875530.jpg" alt="-w292"><br>菜单栏变成这种了<br>半强迫症受不了，<br>然后吧，抱着试一试的态度，说是github支持https了，然后点了个对号就ok了</p><ul><li>选择对应代码项目的settings，然后找到<br><img src="https://i.loli.net/2019/06/10/5cfe14bfccf5123212.jpg" alt="-w823"></li></ul><p>这里，把对号打上就全部解决啦！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这个自己本来是发现这个图标怎么部署用域名访问后不安全了，然后图标还没了？&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.dddjava.com/categories/tool/"/>
+    
+    
+      <category term="github" scheme="http://www.dddjava.com/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>github 关联 godaddy 域名碰到的坑</title>
+    <link href="http://www.dddjava.com/github-and-godaddy-fk.html"/>
+    <id>http://www.dddjava.com/github-and-godaddy-fk.html</id>
+    <published>2018-09-24T22:43:35.000Z</published>
+    <updated>2019-08-01T02:23:06.985Z</updated>
+    
+    <content type="html"><![CDATA[<p>故事起因，自己有一台服务器，原来博客是部署在上面的，这次打算公开并且开始真正的写博客了，想不公开服务器的ip，因为上面部署了好多东西，你懂的。所以后来就想还是用github吧，然后域名解析给我坑死了，下面说一下步骤吧，有问题可以联系我。<br><a id="more"></a></p><h2 id="github-配置"><a href="#github-配置" class="headerlink" title="github 配置"></a>github 配置</h2><p>我的项目已经部署在blog仓库中了，因此直接新建一个blog项目就ok了，网上好多教程，以前自己建立了io的仓库，这次拿来直接用，但是需要添加一个 CNAME 文件，自己添加了，但是每次hexo一编译就没了，后来查询了一下，放到source目录下就ok了（原来放在根目录下了），起初配置的 dddjava.com，网上好多教程都是这么说的，后来用了第二版，等会说。</p><h2 id="我的域名是godaddy的，这个网站吧，坑"><a href="#我的域名是godaddy的，这个网站吧，坑" class="headerlink" title="我的域名是godaddy的，这个网站吧，坑"></a>我的域名是godaddy的，这个网站吧，坑</h2><p>里面注释写的不好，所以我一直搞不懂 a记录和chame的区别，区别看后面，这里先说教程，<br>再说一点，好多教程用的第三方解析的，没有必要，出发国内外两套环境，可以用第三方解析</p><ul><li>一条a记录，配置成服务器的ip地址，这个ip地址，需要自己ping自己的github的博客地址得到，不要随便抄袭别人的教程上的，没用的，因为这东西老变。</li><li>一条CNAME记录，配置的自己的    xxx.github.io<br>然后剩下的ns记录不动，我其余的都删除了<br><img src="https://i.loli.net/2019/06/10/5cfe14ce0348b49105.jpg" alt="-w1113"><br>然后等了一会，我也不知道多久吧，今天给这个搞的恼火，吃完月饼，躺了一会，起来就想通了。</li></ul><h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>使用验证的时候发现，每次都是访问 <a href="http://www.dddjava.com">www.dddjava.com</a> 跳转到 dddjava.com 了，我一想，这不行啊，我原来的访问记录全丢失了啊（就是访问博客的人流量，其实没啥用，还有一点就是瞅着不喜欢），然后终于让我找到了教程，感谢大佬<br><a href="https://segmentfault.com/a/1190000005775893" target="_blank" rel="noopener">https://segmentfault.com/a/1190000005775893</a><br>如何绑定二级域名，我就不献丑了，可以参考，感谢大佬的文章</p><h2 id="github的chame的作用，可以看这个文章"><a href="#github的chame的作用，可以看这个文章" class="headerlink" title="github的chame的作用，可以看这个文章"></a>github的chame的作用，可以看这个文章</h2><p><a href="https://segmentfault.com/a/1190000011203711" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011203711</a><br>核心思想就是，服务器得有域名的配置，域名得有服务器的配置，要不怎么说github强大呢，啥都干！</p><h2 id="dns解析，a记录和chame的区别"><a href="#dns解析，a记录和chame的区别" class="headerlink" title="dns解析，a记录和chame的区别"></a>dns解析，a记录和chame的区别</h2><p><img src="https://i.loli.net/2019/06/10/5cfe14ce5275955922.jpg" alt=""><br><img src="https://i.loli.net/2019/06/10/5cfe14ceac42d47888.jpg" alt=""><br>这两张图片用的别人的（侵权删，看看人家tx，都给你写的明明白白，看go啥的没写）</p><h2 id="发现的好用的工具"><a href="#发现的好用的工具" class="headerlink" title="发现的好用的工具"></a>发现的好用的工具</h2><p><img src="https://i.loli.net/2019/06/10/5cfe14cf06cf467371.jpg" alt="-w715"><br>在验证的过程中吧，为了验证自己的猜测，我就去抓别人博客的ip地址，进行验证，然后就知道他们也是挂载到github了，然后再去github参考一下，就明白了。<a href="http://www.ip138.com" target="_blank" rel="noopener">http://www.ip138.com</a></p><h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul><li><a href="https://help.github.com/articles/setting-up-an-apex-domain/" target="_blank" rel="noopener">https://help.github.com/articles/setting-up-an-apex-domain/</a></li><li><a href="https://segmentfault.com/a/1190000011203711" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011203711</a></li><li><a href="http://fengdaoting.com/2017/11/12/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E7%BB%91%E5%AE%9AGithub%E4%B8%8A%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%B0Godaddy%E5%9F%9F%E5%90%8D/" target="_blank" rel="noopener">http://fengdaoting.com/2017/11/12/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E7%BB%91%E5%AE%9AGithub%E4%B8%8A%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%B0Godaddy%E5%9F%9F%E5%90%8D/</a></li><li><a href="https://zerosrat.com/2016/11/13/Hexo-github-gages-blog-setup-and-migrate/" target="_blank" rel="noopener">https://zerosrat.com/2016/11/13/Hexo-github-gages-blog-setup-and-migrate/</a></li><li><a href="https://yucicheung.me/2018/03/14/%E4%B8%BAGithub-page%E7%BB%91%E5%AE%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%B9%B6%E5%AE%9E%E7%8E%B0https%E8%AE%BF%E9%97%AE/" target="_blank" rel="noopener">https://yucicheung.me/2018/03/14/%E4%B8%BAGithub-page%E7%BB%91%E5%AE%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%B9%B6%E5%AE%9E%E7%8E%B0https%E8%AE%BF%E9%97%AE/</a></li><li><a href="http://winterttr.me/2015/10/23/from-dns-to-github-custom-domain/" target="_blank" rel="noopener">http://winterttr.me/2015/10/23/from-dns-to-github-custom-domain/</a><br>这篇文章，讲解的不错，就是没写完整的方案，哎！</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;故事起因，自己有一台服务器，原来博客是部署在上面的，这次打算公开并且开始真正的写博客了，想不公开服务器的ip，因为上面部署了好多东西，你懂的。所以后来就想还是用github吧，然后域名解析给我坑死了，下面说一下步骤吧，有问题可以联系我。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.dddjava.com/categories/tool/"/>
+    
+    
+      <category term="github" scheme="http://www.dddjava.com/tags/github/"/>
+    
+      <category term="godaddy" scheme="http://www.dddjava.com/tags/godaddy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端权限</title>
+    <link href="http://www.dddjava.com/front_permission.html"/>
+    <id>http://www.dddjava.com/front_permission.html</id>
+    <published>2018-09-20T15:42:06.000Z</published>
+    <updated>2019-08-01T02:23:06.985Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前端技术"><a href="#前端技术" class="headerlink" title="前端技术"></a>前端技术</h1><ul><li>实际上 前端控制了跳转以及返回值，前端自己做了路由设置</li><li>主要是根据token跳转</li></ul><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前端技术&quot;&gt;&lt;a href=&quot;#前端技术&quot; class=&quot;headerlink&quot; title=&quot;前端技术&quot;&gt;&lt;/a&gt;前端技术&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;实际上 前端控制了跳转以及返回值，前端自己做了路由设置&lt;/li&gt;
+&lt;li&gt;主要是根据token跳转&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://www.dddjava.com/categories/front/"/>
+    
+    
+      <category term="前端" scheme="http://www.dddjava.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+</feed>

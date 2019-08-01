@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[idea搭建zookeeper源码服务器]]></title>
+    <url>%2Fzookeeper%20opensource.html</url>
+    <content type="text"><![CDATA[背景今年的一个小目标就是看一个java的开源软件，首先从zookeeper入手，毕竟比别的”简单“些 搭建环境 GitHub下载源码 不要使用master分支，自己使用的时候，有实现类冲突，不知道后续会解决没有，因此选择了稳定版本3.5.5 去掉 zookeeper-server项目中pom文件中的两个jetty的scope，因为咱们运行的时候，还是使用的jetty服务器，所以得引入进来，要不然会报错 添加resources编译，因为要不然resources目录不会编辑进入class文件夹，日志就出不来，会有警告 copy 根目录下的conf下的log4j文件到zookeeper-server项目下的resources下 copy 根目录下的conf下的 zoo_sample.cfg到自己的文件目录下，修改端口最好，因为防止和brew搭建zookeeper冲突，可以更好的校验 配置 zoo_sample.cfg 修改名字为 zoo.cfg，修改日志路径和端口如下： 配置idea启动，就ok了，有日志显示 测试 1zkCli -server localhost:2189 自己添加个对象，然后获取下，说明成功了，停用服务器，客户端再获取，会抛出异常，说明成功啦！ 后记网上的18年3月份的教程都是ant编译的，但是现在maven已经支持了，所以省事了不少，有问题可以及时反馈我的邮箱和评论。]]></content>
+      <categories>
+        <category>oss</category>
+      </categories>
+      <tags>
+        <tag>开源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[程序员如何买降噪耳机，如何煲耳机]]></title>
+    <url>%2Fearphone.html</url>
+    <content type="text"><![CDATA[初衷由于不想听到一些声音，所以买了个降噪耳机 过程在群里问了不少程序员，主要有4款，bose qc2，索尼mx2，索尼入耳的，bose入耳的。网上也看了不少评价，了解了之后，就去店里看看（就好比网上看自行车，一定要去店里试试） 北京店里看耳机在新天地，bose和索尼一个在五区，一个在一区，当时迷糊了，找bose 的时候去的苹果店，还好不远。后来才恍然意识到，苹果是beats啊！我了个大擦 实体店结论bose：qc带起来真舒服，效果也不错，降噪有环境音，当时不会用，没看开启的等级，后来验证，完全足够用了索尼：索尼体验店有一个重大的失误，他们的耳机上面都是挂着防盗的，有点重量。带起来一般，降噪很nb，实际上没有qc舒服，索尼音质不错（自己的入耳的都是索尼的）入耳的：都不咋地，耳朵不习惯 tb购买看完了，就去tb买呗（不差钱，就官方吧）按照销量一排序，我擦lei，怎么才1700，后来一问说是没发票，说是可以保修，我信不过，找了个2000的，带发票的。 验货 注册官方通过 连接官方app通过 通过app查看生产时间，18年8月份，很新 看了外观，塑封，序列好啥的，没看出是毛病，抠鼻表情 没翻车，还行。下一步就是如何煲耳机了 煲耳机tb客服提供了因为文件。我问他要教程，他说去他们tb首页就有，我看了不详细。后来看了给的文件，里面有教程！！！我又查了一些资料，归纳一下，首先，有说煲耳机有用的，有说没有用的，使用大G搜索耳机，论坛不错，里面很多教程也可以参考。 煲耳机分为自然煲和刻意煲自然煲就是让他加速成熟，聆听声音，聆听了一共63个小时刻意煲，我没记录，应该是通过软件 我工作中用mac，家里面还有一台公司的闲置ThinkPad，远程用他煲耳机！（有线连接耳机，不要用蓝牙，耳机没电了就不能用了，如果用有线，没电了可以继续听）下载teamviewr，远程控制时间，下载网易云音乐（试了一下支持原生音乐文件） 煲耳机分为3个阶段（具体可以看我分享的网盘文件，这里只说步骤！） 适应期，用渡口 11 个小时，正常音量30%，然后休息4个小时（本来想用 Treasure.Island.Sound.UNPLUG.Unplug1诞生 ，但是听着不得劲） 关键煲期，梁祝、渡口、闲云孤鹤 48小时 60%至70%正常音量，3首歌，不停循环，然后休息4个小时 收尾，加州旅馆、The mass（Era）、Fairytale（神秘花园） 50% 14个小时 最后2个星期，就按照自己的听歌习惯，不停去适应，慢慢就好了。 音量的说明：一直没明白他说的正常音量是耳朵听到的啊，还是最大的，可是最大音量吧，这个不同的电脑，软件是不同的，所以我都是以正常音量为标准！ 煲完之后，我对比了一下，确实柔和圆润了许多。 共享文件如下链接:https://pan.baidu.com/s/1DPwuS87H05sE2XazjAilWg 密码:326s 我放了好多资源，文件名直接搜索就行了。对了，耳机刚到的时候，用试听的文件去试！！！ 心得 音量控制自己做好笔记，下一次有对比 teamviewer会说你是商用，然后你自己电脑也有声音的同时，远程电脑的声音不会断掉，时间到了，暂停就行了，记得清空播放列表哈 最后煲完了，直接远程电脑关机是最好的 说明以上只代表了我的煲耳机步骤，并分享出来，煲坏了不怪我哦，音量控制是关键。]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>【煲耳机】</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[redis在springboot 2版本下的使用的问题]]></title>
+    <url>%2FredisProblem.html</url>
+    <content type="text"><![CDATA[今天起的新项目使用spring session redis。抛出了几个问题，问题异常不贴了 初始化redis 工厂实例失败异常如下： 1Consider revisiting the conditions above or defining a bean of type &apos;org.springframework.data.redis.connection.jedis.JedisConnectionFactory&apos; in your configuration. 自己使用了 12345&lt;dependency&gt; &lt;groupId&gt;org.springframework.session&lt;/groupId&gt; &lt;artifactId&gt;spring-session-data-redis&lt;/artifactId&gt; &lt;version&gt;2.1.2.RELEASE&lt;/version&gt;&lt;/dependency&gt; 只添加这一个是不行的，因为我们如果打开pom文件会发现，虽然引用了 spring-data-redis ，但是其中的两个driver 都是option的，可选择的，所以在主要的项目中得指定一个redis客户端。从2.0开始，spring 默认使用的 lettuce 客户端，我们可以添加上他就ok了。 如图所示，commons包也是option的，所以也得添加。如果想使用jedis客户端，那么就直接引用jedis客户端就行了，去掉截图中的两个引用。 ps：顺便再提及一点，如果同时引用了lettuce，jedis两个jar包的话，那么就会产生jedis初始化失败的问题，这是因为，源码中 LettuceConnectionConfiguration 初始化比redis的工厂类早。 如果使用lettuce碰到连接超时的问题，RedisCommandTimeoutException那么将截图中的timeout配置项去掉就可以了。 说明一下最近比较忙，写了不少笔记，总结了很多东西，不少干活。近一年会主键开发。起了个新项目，今年开源，用到了不少东西，对新手比较友好。]]></content>
+      <categories>
+        <category>redis</category>
+      </categories>
+      <tags>
+        <tag>redis</tag>
+        <tag>spring boot</tag>
+        <tag>spring session</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[如何内网穿透+闲置的电脑能干啥？做服务器啊]]></title>
+    <url>%2Fnat-ddns.html</url>
+    <content type="text"><![CDATA[内网穿透，举个例子，我有个笔记本，然后闲置了，连上网了，可是远程怎么用，虽然可以使用teamviewer这种，可以作为一种工具。不过对于我来说不合适。需求：Linux服务器：最后自己做个映射。Windows这种：用teamviewer足够了，也可以做映射，比如做为自己的网站，内容都保存在自己的电脑上，也ok，好多都用树莓派啥的做服务器，也都行。网盘：用群辉，google或者百度一搜一堆教程。电脑重装成centos，需要远程访问，需要暴漏ip地址，但是外网的ip是活动的，因此需要使用第三方服务器，最快捷的就是使用花生壳，6块钱买个服务。简单说一下步骤： 按照网址http://service.oray.com/question/4287.html 注册，然后购买内网穿透，有一点就是映射列表添加的时候内网主机写127.0.0.1 自己远程ssh的时候，用户名密码记得写自己服务器的用户名，密码。]]></content>
+      <categories>
+        <category>网络</category>
+      </categories>
+      <tags>
+        <tag>内网穿透</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[如何使用U盘安装centos]]></title>
+    <url>%2Fcentos.html</url>
+    <content type="text"><![CDATA[如何使用U盘安装centos自从换了mac本之后，Windows本就很少用了，本来便宜卖给兄弟的，但是嫂子嫌弃太沉了。就一直搁置着，现在因为需要学习些东西，需要将他搞成Linux，因为自己的服务器也是centos的，所以就装的centos，然后再搞一个内网穿透外网就ok了。踩了不少坑，下面把步骤列出来 下载centos，去官网下载就ok了，用的dvd版本。那个版本都行，最好不要用迅雷啥的下载，那样子还得校验md5，网速快的的话使用浏览器默认的下载工具几分钟的事情使用u深度，老毛桃都行，直接制作iso模式，不要使用智能模式！！！这一步有坑，使用ios刻录到U盘中，相当于u盘就是iso了，如果使用的智能模式，那么还得拷贝，主要是有一步识别的问题！ 安装插入u盘华硕电脑选择F2然后调整boot顺序然后到如下页面后 这一步的时候，网上教程说是按着e编辑，我这按了好久不行，结果发现是table键，有英文提示，然后将vmlinuz initrd=initrd.img inst.stage2=hd:LABEL=CentOS\x207\x20x86_64 quiet改成vmlinuz initrd=initrd.img linux dd quiet 然后按回车就行这里显示的硬盘的信息 网上的图，我的是sdb4使用ctrl alt del重启不行，然后我就关了电源，继续进入，然后按住table，编辑如下将vmlinuz initrd=initrd.img inst.stage2=hd:LABEL=CentOS\x207\x20x86_64 quiet改成vmlinuz initrd=initrd.img inst.stage2=hd:/dev/sda4（上一步查看的你自己的U盘盘符） quiet然后按回车就ok了。 1，2，3都默认好了，中文的，4的话，我选择了gnome桌面，毕竟方便看一些 5的话，我选择的自动分区，比较懒。。。 6这里的话，选择一下wifi或者有线 开始安装吧然后下一步设置一下密码就ok了。最好别用大写，有时间会坑，因为这个切换大小写忘了之后就完了。我就是找了好久发现一个本来应该小写的结果大写了，密码都搞错了，后来修改了。 记得！！！拔掉u盘，然后就ok了。 开始ssh远程连接默认已经安装了ssh，如果是dvd版本的话步骤如下：第一步 查看本机是否安装SSH软件包[root@localhost ~]# rpm -qa | grep sshopenssh-server-6.6.1p1-12.el7_1.x86_64openssh-clients-6.6.1p1-12.el7_1.x86_64libssh2-1.4.3-8.el7.x86_64openssh-6.6.1p1-12.el7_1.x86_64 #####如果没有，则需要安装[root@localhost /]# yum install openssh-server第二步 #####开启 SSH 服务[root@localhost ~]# service sshd startRedirecting to /bin/systemctl start sshd.service #####查看TCP 22端口是否打开[root@localhost ~]# netstat -ntpl | grep 22tcp 0 0 0.0.0.0:22 0.0.0.0: LISTEN 17816/sshdtcp6 0 0 :::22 ::: LISTEN 17816/sshd第三步 #####接下来便可使用终端仿真程序（例如putty）去登陆远程主机如果你在客户端不能连接SSH服务的话，那可能是防火墙的原因，终端命令行中输入 iptables -nL 来看是否开放了ssh tcp 22 端口：[root@localhost ~]# iptables -nL你可以将防火墙中的规则条目清除掉：[root@localhost ~]# iptables -F 客户端使用ssh username@192.168.2.194或者mac本使用secureCrt 问题碰到了刚开始重启不成功，一直显示watchdog watchdog0: watchdog did not stop!然后更新了系统，然后重启还是有这个日志，不过会重启成功了。不行就直接按电源！ centos7 笔记本关系合盖睡眠由于是笔记本，经常需要关闭盖子，但是不能让他休眠！参考 https://blog.csdn.net/qq_34911465/article/details/70246193 1234567891011121314151617181920212223242526272829303132333435363738394041动作包括：HandlePowerKey：按下电源键后的动作HandleSleepKey：按下挂起键后的动作HandleHibernateKey: 按下休眠键后的动作HandleLidSwitch：合上笔记本盖后待机这些动作的值可以是ignore（什么都不做）poweroff（关机）reboot（重新启动）halt（关机，和poweroff有什么区别，需要手动断开电源？）suspend（待机挂起）hibernate（休眠）默认情况是，当我合上笔记本屏幕的时候，系统会待机。如果我不想让系统在我合上笔记本的时候待机，怎么办呢？用vi编辑器打开 /etc/systemd/logind.conf去掉HandleLidSwitch前面的注释符号#，并把它的值从suspend修改为ignore。[Login]#NAutoVTs=6#ReserveVT=6#KillUserProcesses=no#KillOnlyUsers=#KillExcludeUsers=root#InhibitDelayMaxSec=5#HandlePowerKey=poweroff#HandleSuspendKey=suspend#HandleHibernateKey=hibernateHandleLidSwitch=ignore#HandleLidSwitchDocked=ignore#PowerKeyIgnoreInhibited=no#SuspendKeyIgnoreInhibited=no#HibernateKeyIgnoreInhibited=no#LidSwitchIgnoreInhibited=yes#IdleAction=ignore#IdleActionSec=30min#RuntimeDirectorySize=10%#RemoveIPC=no~ 然后systemctl restart systemd-logind，使更改生效。再合上笔记本盖子，也不会待机了。]]></content>
+      <categories>
+        <category>centos</category>
+      </categories>
+      <tags>
+        <tag>system</tag>
+        <tag>centos</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[代码开源协议怎么选择]]></title>
+    <url>%2FopenSource%20License.html</url>
+    <content type="text"><![CDATA[背景想开源自己的代码了 怎么配置开源协议1.自己的协议，放到项目根目录下2.如果是整个文件包都是引用的，那么根目录放上协议3.后续如果可以的话对应的类也要搞一下，写上协议 参考文章 https://www.jianshu.com/p/cceeafb019edhttps://segmentfault.com/q/1010000000126507]]></content>
+      <categories>
+        <category>oss License</category>
+      </categories>
+      <tags>
+        <tag>开源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[博客-程序员的笔记工具+日历工具]]></title>
+    <url>%2Fprogrammer_tool.html</url>
+    <content type="text"><![CDATA[20181228新需求这不又开始自己作了。冬天骑车太冷了，坐地铁得看点东西，但是mweb使用icloud或者Dropbox同步都有问题，要么同步成功了，但是搜索功能挂了。就想找一款软件，但是比如bear，还有另外的，都是订阅模式收费的,不能买断，这就比较坑了，现在付费的我用的比较好的就是印象笔记了。自己的要求： 文档可以都是一个目录下 我们看到的可以自己定义目录，然后路径，最好有3层目录。 支持ios，mac mweb：优点： 层级目录方便 ios免费 图片处理很方便 支持图床 导出方便 缺点： 东西多了还是比较乱 个人软件，更新不频繁，issue处理不太好。也是收费软件。 bear等 缺点：订阅收费 印象笔记 优点： 现在由中国自己的公司独立运营，因此md支持的非常好，所以开发速度快了很多 缺点： 臃肿 要是有支持图床就好了 层级目录真是渣渣（现在自己的方法就是统一前缀） 后来想了一下，想自己做个软件，两种方案： ios原生开发个软件，同步使用icloud，然后电脑端使用随便软件编辑都行，ios端，只要查看就行了，然后自己随笔都记录在印象笔记中 使用自己的服务器，需要前端+后端合作开发，同步的话使用Dropbox客户端就行了，然后快速编译发布成服务，相当于自己的wiki，有许多不错的wiki，不过自己想的是需要账号登录，所以还需要开发，像confluence那种麻烦点，我那服务器内存根本吃不消。 但是如果开发工作量大概需要15人日，而且ios我不会，前端还得找人或者现学。所以退而求其次，继续使用印象笔记+新浪图床+things3+日历+icloud+备忘录。 在找寻的做成中发现的一些不错的东西 如果对于需求不是很高的人，我认为在ios上写md是没有必要的。 在以前印象笔记不支持md的时候，使用的都是马克飞象，实际上马克飞象也是中国的印象笔记团队开发的 https://www.zhihu.com/question/20086835 一个使用系统备忘录的哥们，在抉择好久之后，https://sspai.com/post/36991 还有个语雀，这个吧是阿里的，今年开放的，说是内部平台，但是实际上，还是比较简陋，为什么这么说，就是没有把他当成一个产品做，就是我开源了，你们用用，给人的感觉很随意，生态很差，导入导出，手机客户端等等，不易用等等。 20181228 分隔符需求最近需要做一个长期计划，85天的计划，而且前段时间使用mac的fantastic，有个问题就是，对于每日的任务处理不太好，虽然也支持repeat事件，但是每天都一片红，太丑了。所以找了好多，又找回了曾经没细看过的things软件，mac上有破解版的。但是ios的比较难搞，还好后来找人弄了个账号，主要是比较贵，先用用，后续打折买个。下面说历程： 下载了omnifocus 不喜欢页面 不喜欢页面 主要是不符合那种简单明了的感觉pass 知乎 https://www.zhihu.com/question/19575291 上面提到了好多，但是吧，虽然提到了很多免费的软件（免费的最贵），除了不支持同步，就是功能不全，很麻烦，而且很丑。 然后下载了mac版本的things，嗯嗯嗯，很对口味，找不到破解版的可以找我。支持每天日志记录，支持读取日历，而且很漂亮。就他了。 我的笔记工具，日历工具汇总 平常剪切网页：印象笔记，续费了几年，建议便宜的时候就多买1年。我上次续费就是原价买的，哎。 账号记录：印象笔记，主要是搜索功能强大； 常用的网页备份：印象笔记，万一哪天原作者不小心删除了呢？对吧，而且有一些很好的教程，比如怎么搭建ss这种，人家都写的很好了，自己就没有必要写了，因此直接印象剪切，贼方便 自己知识，提纲整理：mweb，因为这就会让你产生一种感觉，就是这个东西是要给人看的，所以我都做的很规矩。比如现在写博客，都是用mweb写。目录支持好，md支持非常好，可以一键上传到图床。 每天要做的事情：fantastic 2，但是有一个缺点，比如，每天要做的事情，泡脚啊，给电驴充电啊，就每天挪来挪去很麻烦。 做长期计划：找了不少，也有meistertask，omnifocus这种，但是和我的日历软件整合度不够，因此选择了things。 提高效率：自己如果在活少的时候，很容易玩手机，无意中发现了番茄效率法，很好使，对于我这种拖延症。mac上用的番茄土豆工具，然后耳机用的白噪音，效率非常高。https://www.rainymood.com/ 这里只说缺点，优点很多的 印象，层级目录支持的不是很好，所以只做知识仓库，汇总用mweb quiver吧，太紧凑，编排，不好看，层级目录设计的不好，就是没有目录的感觉，废弃 vscode不适合写文档，用来处理非java代码比较好 代码工具，顺便提一句 java当然是idea啊由于现在注册码比较难搞，好多注册机，网页那种都不好使了，而且自己用的mac的，不要用那种替换jar的方式，有一种方法一劳永逸tb找到一个销量最高的商家，找不到找我，你自己注册一个账号，idea的，然后他帮你买一个学生版的idea一年，全家桶都能用了，然后直接用你的账号填充到idea里面就ok了，这个是最官方的形式。things 教程 https://www.ifanr.com/app/842145 https://sspai.com/post/32965 https://www.ifanr.com/app/473344]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[解决图床问题-坑爹的“免费”七牛云]]></title>
+    <url>%2Fimg.html</url>
+    <content type="text"><![CDATA[背景原来按照好多教程，使用了七牛云的图床，不错，但是正因为是免费的，域名失效了！！！然后图片全都不行了，只能寻找新的图床，历经挫折。下面将我的解决方案分享出来； 亏我当时还起的名字我爱七牛 我这没有beian的域名绑定这个干啥，很麻烦。。。图片还能访问（不知道是否因为cdn的关系），就是上传不了。环境：macmweb 解决方案新浪图床本来找了一个github的代码，自己本地起个服务，但是，后来坐着没更新了，npm编译失败，版本的问题，js又不太熟悉，只能另寻办法，php代码不少，但是也看不懂，最后终于用关键词在github上找了一个java代码，2018版本的，然后试了一下ok【源码的方案，我会改进的，由于新浪没有公开提供api，都是抓取的】。不过后来又找了一下，有了新的解决方案； 使用ipic软件，下载下来之后，安装mover插件，不付费版本只有新浪图床，够用了，其他的图床有别的解决方案（因为都api都开发，很好写） 使用ipicMover扫描之后，可以将我这七牛的迁移过来 因此，对于我来说，在mweb写完博客之后，使用mweb上传到新浪（可以使用代码），然后copy包含新浪地址的md到hexo中（因为自己都是保留原图到Dropbox中的）。 然后直接提交代码就ok了。（上图就是替换七牛的地址） 如果没有本地新浪api上传的话，可以copy这个文章，然后使用ipic扫描，这样的话就会替换地址，然后copy到hexo中就ok了。 第三方图床如何选择图床 因为自己的服务器是github，因此尽量内网和外网都能访问 http://bangumi.tv/group/topic/343056 这个网址是作者评测，就是没有小电视的国内访问不了。所以，想自己定义api的可以使用这些图床 像上图好多都是免费的，极简图床，api是收费的。如果懂代码的话，建议自己开发一下。不算难。 好用的一些网址，以及自己怎么使用这些图床catbox.moe 这个自己实现了文件上传，最笨的方法，就是Chrome开启开发组模式，然后使用postman模拟，然后copypostman的code（postman是可以根据语言生成代码的），后来发现对方开放了api； 参考的网址 https://sspai.com/post/40499 里面有Windows的和ipic类似的工具 http://www.cnblogs.com/fengwbetter/fengwbetter/p/9107742.html Python的登录微博参考，不过自己对Python不熟悉。 https://cloud.tencent.com/developer/article/1152353 php版本，使用session上传图片的 https://github.com/xx13295/sina-picbed 新浪图床java代码。 https://github.com/Suxiaogang/WeiboPicBed 新浪图床Chrome扩展 https://www.v2ex.com/t/473771 v站的图床推荐。 https://github.com/qiniu/qshell/issues/188 七牛图床域名过期的问题。 https://invisprints.wordpress.com/2017/12/10/uploadpicinweibo/ js的新浪图床，有大佬懂js的可以改改支持一下现在最新的npm啥的。 如果使用自己的微博账号，微博上传失败的话，需要关闭微博地址验证；如果只是简单的一两张图片上传，可以使用Chrome的扩展，搜索图床，有不少微博的插件。图床想找总能找到的，就是麻烦，不行就自己搞个服务器。结论自己使用上面的java代码，本地启动服务，然后使用mweb上传到图床服务器，copy代码，在hexo中新建博客。然后commit，部署，自动继承编译就ok了。 已经开放源码和第一版源码地址：https://github.com/RMzcq/dddjava下载源码自己编译，或者从如下地址下载：https://u3492574.ctfile.com/fs/3492574-319064523 首先配置bootstrap.yml中的新浪用户名密码，记得关闭新浪双重验证 运行jar包 java -jar jar名称 配置地址 http://127.0.0.1:8089/file/uploadFileToSina参数为file 类型为file，可以使用postman或者mweb测试一下。然后就能使用啦！如果使用mweb的话，返回的参数取data，这个就是上传后的url路径]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>【图床,新浪图床】</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[解决google driver 开了代理(ss)之后也报错的问题]]></title>
+    <url>%2FgoogleDriver%20problem1.html</url>
+    <content type="text"><![CDATA[问题困扰了很久，但是也找不到解决版本，后来使用关键字搜索到了。使用命令行的方式不建议，一是维护麻烦，而是不太懂。。。自己的ss-ng默认开启了http和socket啊，但是不行，据说google drive 无法识别http proxy以外的proxy 下载 proxifier，有码的，这个可以自己找需要在隐私中允许一下添加 proxies，我的是ss-ng，因此添加 然后规则就有了，这个时候driver就可以用了，不过这个时候mac的所有应用请求都走的这个，得更改一下。删掉其他的配置，没有用，也不用下载github的配置，因为最终还得走ss代理。下图中的各个项不明白的可以问我，比较简单就没介绍。按图配置就ok了。 参考说是打上这个勾勾，可以防止dns污染。别的就没有了，很简单。 两个不错参考的网址 http://blog.batesma.com/20170811-google-drive-proxy-solved/ https://www.jianshu.com/p/91a7c17f4a0e]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>google driver</tag>
+        <tag>ss</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2.executorService]]></title>
+    <url>%2Fnull.html</url>
+    <content type="text"><![CDATA[类翻译一个executor 可以提供方法来处理终止和产生一个 future 来记录一个或多个异步任务的进度。（mark，executor目前只是一个接口，目前还做不到。。。）一个executorService可以被关闭，这将会导致它拒绝新的任务。ExecutorServie提供了两个关闭方法。shutdown 方法在终止之前允许先前提交的任务执行完。shutdownNow 方法阻止等待的任务启动 并且尝试停止当前正在执行的任务。一旦终止，Executor没有执行中的任务，没有等待中的任务，没有新任务可以提交。一个未被使用的ExecutorService应该被关闭来回收它的资源。submit 方法扩展了 Executor的基本方法 execute，通过创建并返回Future，Future可以用来取消执行 和/或者 等待（执行）完成。invokeAny 和 invokeAll 方法 是执行最通用的，有用的集合执行形式。执行集合任务，然后等待至少一个或全部完成。ExecutorCompletionService可以被用来编写这些方法的定制变体。Executors 为executor Service提供了方便的工厂方法。（mark：executor是也为executor提供了工厂）使用示例：这里有一个网络服务的草图，其中线程在线程池中来处理请求，他使用了预配置工厂方法（newFixedThreadPool）。 1234567891011121314151617181920212223242526272829* &lt;pre&gt; &#123;@code* class NetworkService implements Runnable &#123;* private final ServerSocket serverSocket;* private final ExecutorService pool;** public NetworkService(int port, int poolSize)* throws IOException &#123;* serverSocket = new ServerSocket(port);* pool = Executors.newFixedThreadPool(poolSize);* &#125;** public void run() &#123; // run the service* try &#123;* for (;;) &#123;* pool.execute(new Handler(serverSocket.accept()));* &#125;* &#125; catch (IOException ex) &#123;* pool.shutdown();* &#125;* &#125;* &#125;** class Handler implements Runnable &#123;* private final Socket socket;* Handler(Socket socket) &#123; this.socket = socket; &#125;* public void run() &#123;* // read and service request on socket* &#125;* &#125;&#125;&lt;/pre&gt; 以下方法分为两个阶段关闭 ExecutorService，第一步通过 shutdown 来拒绝传入的任务，然后调用 shutdownNow ，如果必要的话，可以用来取消任何延迟任务。 123456789101112131415161718* &lt;pre&gt; &#123;@code* void shutdownAndAwaitTermination(ExecutorService pool) &#123;* pool.shutdown(); // 禁止提交新任务* try &#123;* // 等待现有任务终止* if (!pool.awaitTermination(60, TimeUnit.SECONDS)) &#123;* pool.shutdownNow(); // 取消当前正在执行的任务* // 等待一会让任务来反馈是否被取消了* if (!pool.awaitTermination(60, TimeUnit.SECONDS))* System.err.println(&quot;Pool did not terminate&quot;);* &#125;* &#125; catch (InterruptedException ie) &#123;* // （重新）取消如果当前线程被中断* pool.shutdownNow();* // 保留当前线程中断状态* Thread.currentThread().interrupt();* &#125;* &#125;&#125;&lt;/pre&gt; 内存一致性效果：和executor一样。 方法todo 最近时间比较紧，尽力而为]]></content>
+      <categories>
+        <category>concurrency</category>
+      </categories>
+      <tags>
+        <tag>并发</tag>
+        <tag>concurrency</tag>
+        <tag>executorService</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[1.executor]]></title>
+    <url>%2Fexecutor.html</url>
+    <content type="text"><![CDATA[类翻译：这是一个执行提交的任务（Runnable）的对象。这个接口提供了一种解决任务提交的方法，就是每个任务如何运行的机制，包括线程如何使用的详情，调度等等。executor经常被用来替代 显示的创建线程。比如，对于每个线程，我们不用使用1new Thread(new(RunnableTask())).start() 我们可以使用 123456* &lt;pre&gt; * Executor executor = &lt;em&gt;anExecutor&lt;/em&gt;; * executor.execute(new RunnableTask1()); * executor.execute(new RunnableTask2()); * ... * &lt;/pre&gt; 然而，executor接口并不严格要求执行是异步的，在最简单的情景下，一个executor可以在调用者的线程中立即运行一个提交的任务。 123456* &lt;pre&gt; &#123;@code* class DirectExecutor implements Executor &#123;* public void execute(Runnable r) &#123;* r.run();* &#125;* &#125;&#125;&lt;/pre&gt; 更典型的是，任务可以在刨除当前线程，生成其他线程来执行。下面的这个executor就产生（spawn，产卵这个词比较形象）一个新的线程对于每个任务。 123456* &lt;pre&gt; &#123;@code* class ThreadPerTaskExecutor implements Executor &#123;* public void execute(Runnable r) &#123;* new Thread(r).start();* &#125;* &#125;&#125;&lt;/pre&gt; 很多executor的实现都“加上”了某种这些任务如何被调度的限制。下面的executor将任务序列化后提交到第二个executor，图解说明了复合executor。 12345678910111213141516171819202122232425262728293031&lt;pre&gt; &#123;@code * class SerialExecutor implements Executor &#123; * final Queue&lt;Runnable&gt; tasks = new ArrayDeque&lt;Runnable&gt;(); * final Executor executor; * Runnable active; * * SerialExecutor(Executor executor) &#123; * this.executor = executor; * &#125; * * public synchronized void execute(final Runnable r) &#123; * tasks.offer(new Runnable() &#123; * public void run() &#123; * try &#123; * r.run(); * &#125; finally &#123; * scheduleNext(); * &#125; * &#125; * &#125;); * if (active == null) &#123; * scheduleNext(); * &#125; * &#125; * * protected synchronized void scheduleNext() &#123; * if ((active = tasks.poll()) != null) &#123; * executor.execute(active); * &#125; * &#125; * &#125;&#125;&lt;/pre&gt; ps:定义了一个队列，然后添加runnable对象，然后使用另外的executor去执行队列中的对象。但是吧，我任务这个每次执行一个，不过只是demo，可以改造成一个执行运行对象的方法。 在当前包中，ExecutorService 继承了Executor，ExecutorService 是一个更广泛的接口。ThreadPoolExecutor 提供了一个可扩展的线程池实现方式。Executors 为executors提供了方便的工厂方法。 内存一致性效果：在“优先”提交一个runnable对象到executor的线程中，happens-before executor的执行操作，（这个执行操作）可能在另外的线程中；ps:没太懂，这里讲这个的意思，虽然知道happens-before原则，但是不太理解这里，有了解的可以私信我，或者留言。 方法翻译整个接口只有一个方法： 1void execute(Runnable command); ps:没有返回值，只有一个runnable对象。 在将来的某个时间点，执行赋予的runnable，这个runnable可能在一个新线程，在一个线程池中的线程，或者在一个被调用的线程执行，不过这个由实现自己决定。会抛出两种异常 RejectedExecutionException，task不被executor接受 NullPointerException runnable 为空异常]]></content>
+      <categories>
+        <category>concurrency</category>
+      </categories>
+      <tags>
+        <tag>并发</tag>
+        <tag>concurrency</tag>
+        <tag>executor</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[concurrent包解析，翻译]]></title>
+    <url>%2FconcurrentTranslate.html</url>
+    <content type="text"><![CDATA[版本记录 刚开始第一版使用了ps注解翻译者（我）的一些疑问，标记第二版使用mark这个标记，为了更好的区分我本人比较笨，学并发也比较恼火，想了一下，还是翻译一下吧，欢迎大家指正，监督。邮箱：jingtingchangqing@163.comjdk版本:1.8工具:idea翻译:google，我还是会尽量按照原文翻译，不会打乱顺序，挺喜欢倒装句的，有阅读能力的建议看原文，真的很赏心悦目。翻译的东西，原作版权归原作者所有。其他版权详情见文章末尾。 结构基于类的注解翻译基于各个方法的翻译产生了很大的疑虑，就是怎么做这个东西，这个系列讲解的就是材料，而我们经常看到的实际上是工具，是如何使用它们，这样的话就会形成一系列规范。现在想从这里了解一下。 准备工作找到对应的concurrent包，单击右键，选择下面的show diagram，然后生成了一个uml图 有一个比较有毒的点，就是，内部的atomic和locks没有包含在里面，所以到时候单看，看的时候很清晰明了，比较大的几个“根”，executor，blockingqueue，delayed，future，concurrentmap。剩下的都比较单了，现在看起来就很清晰明了，是不。因此第一次做一个系列，有不足之处见谅。]]></content>
+      <categories>
+        <category>concurrency</category>
+      </categories>
+      <tags>
+        <tag>并发</tag>
+        <tag>concurrency</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[骑行 20181001总结【多图预警】]]></title>
+    <url>%2F20181001riding.html</url>
+    <content type="text"><![CDATA[今年十一骑行去了一趟山西大同，内蒙古包头，呼和浩特，乌兰察布，河北张家口，做个总结； 计划本来计划去山东的，但是想了一下，前年去过了，而且城市中也放不开速度。就想去西边和北边，北边呼伦贝尔草原有雨，而且不安全，所以往西边走，路线如下，北京-张家口-大同-鄂尔多斯-包头-呼和浩特-乌兰察布-张家口-北京，但是由于第一天5级大风，而且爬坡过多，路线变成了北京-张家口-大同-包头-呼和浩特-乌兰察布-张家口-北京（去掉了鄂尔多斯） 走之前的准备距离第一天 北京-宣化区 150第二天 宣化区-大同县 150第三天 大同县-内蒙古自治区呼和浩特市清水河县 186第四天 内蒙古自治区呼和浩特市清水河县-鄂尔多斯 200第五天 鄂尔多斯-包头 150第六天 包头-呼和浩特 170第七天 呼和浩特-乌兰察布 150第八天 乌兰察布-张家口 170第九天 张家口-家 180 天气北京30 晴天 11度到20度大同1 晴天 1度到20度呼和浩特市2 晴天 1度到16度鄂尔多斯3 4度到15度包头4 中雨 16到22度呼和浩特5 晴 0-14度乌兰察布6 晴 -3-7度张家口7 中雨转雨夹雪 1-8度 忽略了一个风向带的东西上衣：排汗+抓绒外套下面：秋裤2条+秋季秋裤（结果发现就带了身上的一条排汗裤子，在包头零下5度冻死了）包，4双袜子3包纸1个充电宝充电线灯尾灯低音炮+充电线公司的充电头心率带备用2个能量胶（不够吃，第一天累死了）泡腾片（不够用，导致抽筋了一次）2条内胎，外胎可以带（万幸一次都没用上）500块钱身份证一张银行卡撬棍打气筒玉石（护身符）牙刷牙膏冬季面罩（贼有用，零下的时候，手套是裸露手指的，用它包着手，很用用）2个夏季面罩多功能工具得带一下油（非常有用，2天一次链条油）牛肉粒（路上根本没吃，忘了）洗面奶，牙刷等。 北京-张家口下花园哎，出发的时候就应该开着导航，就是走到路口从后兜里面掏出手机看的，导致的就是过八达岭的时候，走的隧道，还有有一边在修路，开着尾灯，比较安全，哎，要不然太危险了。出发时的天气到山里面有个路口风大，11点了，顶不住了，搞的驴肉火烧，一个10块钱，然后羊杂汤20在延庆的上升距离 路上赶上下小雨了 下花园的宾馆，128好像是，逼格还不错，就火车站旁边，周围很方便，然后回来的时候也是这家，房间隔音好，但是这门吧，不行，第一天睡着还行，最后一天凌晨给我吵醒了，一个女的喝多了，这个叫床的声音大啊，整层楼都能听到，mmp，所以当天骑行状态一般。最终的路线爱车特别脏 休息，哈哈 张家口下花园-阳原县，没有到大同县，第二天依旧风大早上7点出发，天不错，继续干 晚上的小县城 住了个一楼全是打麻将的宾馆，没电梯，也是100块钱吧，就是大车多，以后不会在去山西了，万分小心，也是比较危险的。晒张佳明图 阳原县-右玉县路上看到的变形金刚，好看 大同市好有钱，那天好多结婚的，有朋友也结婚，恭喜老姐 来个葱爆羊肉，便宜好吃，分量足 不知道为啥，右玉县的宾馆全住满了，好像是周边有旅游的，只能找个小宾馆，还好，要不然，只能露宿（得冻死）或者去周边的县城了，不挑挑拣拣，及早做决定 还算干净，安静，公共厕所，卫生间，我出发早，不冲突，就是晚上隔壁的打工小哥，一直唱歌到10点，我骑行一般8点就睡觉，特累。对了，便宜的宾馆，40.看到了好几支队伍，这个应该没找到，哎。 跑了1km，去了南边一个面食店，便宜好吃，早上也去的旁边一个店铺，吃的病，老太太做的特好吃，酥脆好吃的。 晚上做了好多计划，到鄂尔多斯路上的没有什么县城，不方便，只能西北上包头，中间找个县城休息继续佳明图 右玉县-托克托县早上吃完老太太的饼，又打包了两个，然后豆浆放水壶中，事后发现，特有用，这豆浆顶了一天杀虎口 路上拍了好多小毛驴，特有意思，放着dj，小毛驴一直瞄着我，哈哈 景色完美，内蒙古南边的路况是真的优秀，是目前除了北京，山东最好的路况了，车也不多 这个不知道是啥植物，有啥作用，种了好多 沟壑般的山头，爬坡累死了 可爱的小毛驴晚上吃了个鸡，比较好吃， 晚上查路线，发现南边就是黄河，离着就10km，所以打算第二天就多走点路，去看看黄河母亲，结果不虚此行佳明图 托克托县-包头黄河美景，多图，真是壮观 包头的旅馆感觉被坑了，89元，然后阴面，没有阳光，窗户一开，底下是餐馆，全是油烟，灯光还昏暗。佳明图 包头-呼和浩特赶上下雨，只能猛干，下坡推车，哎，心疼自己的车 住在回民区，环境真的很好，吃的也不错，就是冷，零下5度，呼和浩特感觉没有包头规划的好，包头好多新区佳明图 呼和浩特-乌兰察布没啥变化，继续干，晚上撸串，太冷了，内蒙羊肉好吃佳明图 乌兰察布-下花园早上天冷，骑不快，放不开速度，零下好几度，到9点才缓过来。错误的决定，应该到宣化区就不走了，骑到6点天黑了，过山洞的时候骑行差一点晕倒，是感觉周围全是黑的，一下子感觉，人生没有了光明，像幽闭恐惧症似的，开着尾灯也没用，就几十米，我就感觉跑出去了。好吃的面和菜，才17块钱佳明图 下花园-家最后一天，本来以为很快，结果，下八达岭的坡，车多，只能推车，刹车皮快磨没了，所以不敢放，坡太陡了，回家就洗澡-洗衣服-刷车，完美的一天，称称体重，瘦了9斤，今年瘦了30多斤了，完美。佳明图 总花费每天住宿100左右，吃饭40-100，有时候吃的好，有时候不想吃，大概9天1500左右吧； 总结我为人比较严谨，做了算是充分的准备，也有几点失误，路上到乌兰察布买了点东西，增加了1.5斤的重量，不应该。秋裤带少了或者说下身应该穿抓绒的。永远记住一点，安全最重要，不要和大车刚，听到大车来的时候，我都停下来，等他们过去，以后还是骑行内蒙吧，张家口到山西的车真不是盖的。祝大家骑行安全，一个天通苑魅影骑行的渣渣。]]></content>
+      <categories>
+        <category>骑行</category>
+      </categories>
+      <tags>
+        <tag>骑行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于github部署的网站，网站图标不显示，以及“您与此网站之间建立的连接不安全”的解决方案]]></title>
+    <url>%2Fgithub2.html</url>
+    <content type="text"><![CDATA[这个自己本来是发现这个图标怎么部署用域名访问后不安全了，然后图标还没了？ 菜单栏变成这种了半强迫症受不了，然后吧，抱着试一试的态度，说是github支持https了，然后点了个对号就ok了 选择对应代码项目的settings，然后找到 这里，把对号打上就全部解决啦！]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[github 关联 godaddy 域名碰到的坑]]></title>
+    <url>%2Fgithub-and-godaddy-fk.html</url>
+    <content type="text"><![CDATA[故事起因，自己有一台服务器，原来博客是部署在上面的，这次打算公开并且开始真正的写博客了，想不公开服务器的ip，因为上面部署了好多东西，你懂的。所以后来就想还是用github吧，然后域名解析给我坑死了，下面说一下步骤吧，有问题可以联系我。 github 配置我的项目已经部署在blog仓库中了，因此直接新建一个blog项目就ok了，网上好多教程，以前自己建立了io的仓库，这次拿来直接用，但是需要添加一个 CNAME 文件，自己添加了，但是每次hexo一编译就没了，后来查询了一下，放到source目录下就ok了（原来放在根目录下了），起初配置的 dddjava.com，网上好多教程都是这么说的，后来用了第二版，等会说。 我的域名是godaddy的，这个网站吧，坑里面注释写的不好，所以我一直搞不懂 a记录和chame的区别，区别看后面，这里先说教程，再说一点，好多教程用的第三方解析的，没有必要，出发国内外两套环境，可以用第三方解析 一条a记录，配置成服务器的ip地址，这个ip地址，需要自己ping自己的github的博客地址得到，不要随便抄袭别人的教程上的，没用的，因为这东西老变。 一条CNAME记录，配置的自己的 xxx.github.io然后剩下的ns记录不动，我其余的都删除了然后等了一会，我也不知道多久吧，今天给这个搞的恼火，吃完月饼，躺了一会，起来就想通了。 验证使用验证的时候发现，每次都是访问 www.dddjava.com 跳转到 dddjava.com 了，我一想，这不行啊，我原来的访问记录全丢失了啊（就是访问博客的人流量，其实没啥用，还有一点就是瞅着不喜欢），然后终于让我找到了教程，感谢大佬https://segmentfault.com/a/1190000005775893如何绑定二级域名，我就不献丑了，可以参考，感谢大佬的文章 github的chame的作用，可以看这个文章https://segmentfault.com/a/1190000011203711核心思想就是，服务器得有域名的配置，域名得有服务器的配置，要不怎么说github强大呢，啥都干！ dns解析，a记录和chame的区别这两张图片用的别人的（侵权删，看看人家tx，都给你写的明明白白，看go啥的没写） 发现的好用的工具在验证的过程中吧，为了验证自己的猜测，我就去抓别人博客的ip地址，进行验证，然后就知道他们也是挂载到github了，然后再去github参考一下，就明白了。http://www.ip138.com 参考文章 https://help.github.com/articles/setting-up-an-apex-domain/ https://segmentfault.com/a/1190000011203711 http://fengdaoting.com/2017/11/12/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E7%BB%91%E5%AE%9AGithub%E4%B8%8A%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%B0Godaddy%E5%9F%9F%E5%90%8D/ https://zerosrat.com/2016/11/13/Hexo-github-gages-blog-setup-and-migrate/ https://yucicheung.me/2018/03/14/%E4%B8%BAGithub-page%E7%BB%91%E5%AE%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%B9%B6%E5%AE%9E%E7%8E%B0https%E8%AE%BF%E9%97%AE/ http://winterttr.me/2015/10/23/from-dns-to-github-custom-domain/这篇文章，讲解的不错，就是没写完整的方案，哎！]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+        <tag>godaddy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[前端权限]]></title>
+    <url>%2Ffront_permission.html</url>
+    <content type="text"><![CDATA[前端技术 实际上 前端控制了跳转以及返回值，前端自己做了路由设置 主要是根据token跳转]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+</search>
